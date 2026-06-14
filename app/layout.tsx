@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: "/images/quantum-hero.png",
         width: 1536,
         height: 864,
-        alt: "Abstract theoretical quantum circuit diagram"
+        alt: "Theoretical quantum circuit diagram with H, X, phase, CNOT, and measurement gates"
       }
     ]
   },
