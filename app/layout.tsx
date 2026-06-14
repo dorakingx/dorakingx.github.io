@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: "/images/quantum-hero.png",
         width: 1536,
         height: 864,
-        alt: "Abstract quantum computing hero visual"
+        alt: "Abstract theoretical quantum circuit diagram"
       }
     ]
   },
