@@ -16,6 +16,31 @@ https://dorakingx.github.io/
 
 The site is built with Next.js, TypeScript, Tailwind CSS, and static export. It has no backend, database, or paid external service dependency.
 
+## Language Support
+
+The portfolio is available in English and Japanese as separate static routes.
+
+| Language | URL |
+|----------|-----|
+| English  | `/en/` |
+| Japanese | `/ja/` |
+
+The root URL (`/`) is a lightweight redirect page. It checks `localStorage` for a previously saved preference first:
+
+- If `portfolio-language` is set to `en`, it redirects to `/en/`.
+- If `portfolio-language` is set to `ja`, it redirects to `/ja/`.
+- If no preference is saved, the browser language (`navigator.language`) is checked. A browser language starting with `ja` redirects to `/ja/`; all others redirect to `/en/`. The detected language is saved to `localStorage` before redirecting.
+
+`window.location.replace()` is used for all redirects so the root URL is not added to browser history.
+
+A language switcher in the site header lets users switch between English and Japanese at any time. The selection is saved to `localStorage` under the key `portfolio-language` and the user is taken to the equivalent section in the chosen language (e.g. `/en/#projects` → `/ja/#projects`).
+
+To clear the saved preference and trigger browser-language detection again:
+
+```js
+localStorage.removeItem("portfolio-language")
+```
+
 ## Local Development
 
 ```bash
@@ -25,13 +50,23 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+The dev server serves:
+
+- `http://localhost:3000/` — language redirect page
+- `http://localhost:3000/en/` — English portfolio
+- `http://localhost:3000/ja/` — Japanese portfolio
+
 ## Production Build
 
 ```bash
 npm run build
 ```
 
-The static export is written to `out/`.
+The static export is written to `out/`. The following files are generated:
+
+- `out/index.html` — language redirect
+- `out/en/index.html` — English portfolio
+- `out/ja/index.html` — Japanese portfolio
 
 ## GitHub Pages Setup
 
@@ -49,7 +84,7 @@ Use `dorakingx.github.io` for this portfolio website. Do not use a repository si
 
 ## Updating Projects
 
-Featured project content lives in `data/projects.ts`.
+Featured project content lives in `data/projects.ts`. Each project has both an English (`description`) and Japanese (`descriptionJa`) description.
 
 Keep the portfolio focused on these four repositories unless the site strategy changes:
 
@@ -65,6 +100,7 @@ To add a live demo later, add a `liveUrl` field to a project:
   name: "NovelPilot",
   repositoryName: "novelpilot",
   description: "...",
+  descriptionJa: "...",
   tags: ["AI", "Writing Tool"],
   liveUrl: "https://example.com"
 }
@@ -72,4 +108,9 @@ To add a live demo later, add a `liveUrl` field to a project:
 
 ## Updating Skills
 
-Skill groups live in `data/skills.ts`.
+Skill groups live in `data/skills.ts`. Each group has an English `name` and a Japanese `nameJa`.
+
+## Updating Translations
+
+All other UI text (hero, about, section headers, contact links, etc.) lives in `data/translations.ts`, organised by locale (`en` / `ja`).
+

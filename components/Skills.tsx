@@ -1,19 +1,25 @@
+import type { Locale } from "@/data/translations";
+import { translations } from "@/data/translations";
 import SectionHeader from "@/components/SectionHeader";
 import { skillGroups } from "@/data/skills";
 
-export default function Skills() {
+type Props = {
+  locale?: Locale;
+};
+
+export default function Skills({ locale = "en" }: Props) {
+  const t = translations[locale].skills;
+
   return (
     <section id="skills" className="px-6 py-20 sm:px-10 lg:px-12">
       <div className="mx-auto max-w-7xl">
-        <SectionHeader
-          eyebrow="Skills"
-          title="Research, engineering, and creative systems"
-          description="Technical range for prototypes that need both scientific rigor and practical product instincts."
-        />
+        <SectionHeader eyebrow={t.eyebrow} title={t.title} description={t.description} />
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group) => (
             <section key={group.name} className="glass-panel rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-white">{group.name}</h3>
+              <h3 className="text-lg font-semibold text-white">
+                {locale === "ja" ? group.nameJa : group.name}
+              </h3>
               <div className="mt-5 flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
                   <span key={skill} className="rounded-md border border-white/10 bg-black/20 px-3 py-1.5 text-sm text-zinc-200">
