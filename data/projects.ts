@@ -2,6 +2,7 @@ export type Project = {
   name: string;
   repositoryName: string;
   description: string;
+  descriptionJa: string;
   tags: string[];
   liveUrl?: string;
 };
@@ -12,6 +13,8 @@ export const projects: Project[] = [
     repositoryName: "novelpilot",
     description:
       "AI-powered creative writing and novel development tool for generating, organizing, and improving stories.",
+    descriptionJa:
+      "ストーリーの生成・整理・改善のためのAI搭載クリエイティブライティング・小説開発ツール。",
     tags: ["AI", "Writing Tool", "Creative Tech", "Web App"]
   },
   {
@@ -19,6 +22,8 @@ export const projects: Project[] = [
     repositoryName: "qisquiz",
     description:
       "Quantum computing quiz and exam preparation app designed to help learners practice quantum computing concepts.",
+    descriptionJa:
+      "学習者が量子コンピューティングの概念を練習するための量子コンピューティングクイズ・試験準備アプリ。",
     tags: ["Quantum Computing", "Education", "Quiz App", "Qiskit"]
   },
   {
@@ -26,6 +31,8 @@ export const projects: Project[] = [
     repositoryName: "musiq",
     description:
       "Experimental project exploring the intersection of quantum computing, OpenQASM, and music.",
+    descriptionJa:
+      "量子コンピューティング、OpenQASM、音楽の交差点を探求する実験的プロジェクト。",
     tags: ["Quantum Music", "OpenQASM", "Creative Coding", "Quantum Computing"]
   },
   {
@@ -33,6 +40,8 @@ export const projects: Project[] = [
     repositoryName: "AlphaQuoridor",
     description:
       "AlphaZero-style AI project for the board game Quoridor, combining game AI, search, and reinforcement-learning-inspired methods.",
+    descriptionJa:
+      "ボードゲーム「コリドー」のためのAlphaZeroスタイルAIプロジェクト。ゲームAI・探索・強化学習に着想を得た手法を組み合わせています。",
     tags: ["Game AI", "AlphaZero", "Python", "Reinforcement Learning"]
   }
 ];

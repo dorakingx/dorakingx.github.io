@@ -5,15 +5,15 @@ import GitHubSection from "@/components/GitHubSection";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 
-export default function Home() {
+export default function JaPage() {
   return (
     <main>
-      <Hero />
-      <About />
-      <FeaturedProjects />
-      <Skills />
-      <GitHubSection />
-      <Contact />
+      <Hero locale="ja" />
+      <About locale="ja" />
+      <FeaturedProjects locale="ja" />
+      <Skills locale="ja" />
+      <GitHubSection locale="ja" />
+      <Contact locale="ja" />
     </main>
   );
 }

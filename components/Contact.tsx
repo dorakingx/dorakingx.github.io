@@ -1,22 +1,22 @@
+import type { Locale } from "@/data/translations";
+import { translations } from "@/data/translations";
 import SectionHeader from "@/components/SectionHeader";
 
-const links = [
-  { label: "GitHub", href: "https://github.com/dorakingx" },
-  { label: "X/Twitter", href: "#" },
-  { label: "Email", href: "mailto:hello@example.com" }
-];
+type Props = {
+  locale?: Locale;
+};
 
-export default function Contact() {
+export default function Contact({ locale = "en" }: Props) {
+  const t = translations[locale].contact;
+
   return (
     <section id="contact" className="px-6 py-20 sm:px-10 lg:px-12">
       <div className="mx-auto max-w-5xl">
-        <SectionHeader eyebrow="Contact" title="Collaborate on ambitious experiments" />
+        <SectionHeader eyebrow={t.eyebrow} title={t.title} />
         <div className="glass-panel rounded-lg p-6 sm:p-8">
-          <p className="text-center text-lg leading-8 text-zinc-200">
-            Open to collaborations, research opportunities, hackathons, OSS projects, and freelance work.
-          </p>
+          <p className="text-center text-lg leading-8 text-zinc-200">{t.body}</p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            {links.map((link) => (
+            {t.links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}

@@ -1,14 +1,24 @@
 import type { Metadata, Viewport } from "next";
-import "./globals.css";
+import "../globals.css";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dorakingx.github.io";
+const siteUrl = "https://dorakingx.github.io";
 const title = "Doraking | Quantum, AI & Creative Software Portfolio";
-const description = "Portfolio of Doraking, a quantum computing researcher and AI/Web3 software builder.";
+const description =
+  "Portfolio of Doraking, a quantum computing researcher and AI/Web3 software builder.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
+  alternates: {
+    canonical: "/en/",
+    languages: {
+      en: `${siteUrl}/en/`,
+      ja: `${siteUrl}/ja/`,
+      "x-default": `${siteUrl}/en/`
+    }
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -20,6 +30,7 @@ export const metadata: Metadata = {
     title,
     description,
     type: "website",
+    url: `${siteUrl}/en/`,
     images: [
       {
         url: "/images/quantum-hero.png",
@@ -42,14 +53,15 @@ export const viewport: Viewport = {
   colorScheme: "dark"
 };
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function EnLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <header className="fixed right-4 top-4 z-50">
+          <LanguageSwitcher locale="en" />
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
