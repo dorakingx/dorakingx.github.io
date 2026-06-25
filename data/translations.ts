@@ -45,7 +45,6 @@ export const translations = {
       title: "Collaborate on ambitious experiments",
       body: "Open to collaborations, research opportunities, hackathons, OSS projects, and freelance work.",
       links: [
-        { label: "GitHub", href: "https://github.com/dorakingx" },
         { label: "X/Twitter", href: "https://x.com/doraking_en" }
       ]
     }
@@ -93,7 +92,6 @@ export const translations = {
       title: "野心的な実験でコラボレーション",
       body: "コラボレーション、研究機会、ハッカソン、OSSプロジェクト、フリーランスの仕事を歓迎しています。",
       links: [
-        { label: "GitHub", href: "https://github.com/dorakingx" },
         { label: "X/Twitter", href: "https://x.com/doraking_ja" }
       ]
     }
