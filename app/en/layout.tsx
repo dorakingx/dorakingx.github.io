@@ -3,7 +3,7 @@ import "../globals.css";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const siteUrl = "https://dorakingx.github.io";
-const title = "Doraking | Quantum, AI & Creative Software Portfolio";
+const title = "Technical Portfolio";
 const description =
   "Portfolio of Doraking, a quantum computing researcher and AI/Web3 software builder.";
 
