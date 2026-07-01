@@ -18,7 +18,8 @@ export default function FeaturedProjects({ locale = "en" }: Props) {
         <div className="grid gap-5 md:grid-cols-2">
           {projects.map((project) => (
             <ProjectCard
-              key={project.repositoryName}
+              key={project.repositoryName ?? project.name}
+              locale={locale}
               project={{
                 ...project,
                 description: locale === "ja" ? project.descriptionJa : project.description
