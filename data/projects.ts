@@ -30,7 +30,7 @@ export const projects: Project[] = [
       "学習者が量子コンピューティングの概念を練習するための量子コンピューティングクイズ・試験準備アプリ。",
     tags: ["Quantum Computing", "Education", "Quiz App", "Qiskit"],
     liveUrl: "https://qisquiz.vercel.app",
-    faviconUrl: "https://github.com/dorakingx/qisquiz/raw/main/src/app/favicon.ico"
+    faviconUrl: "https://github.com/user-attachments/assets/97c97586-286a-4577-8d54-1bb91f9ebb61"
   },
   {
     name: "musiq",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
       "量子のアイデアをより身近で魅力的に伝えることを目指した、量子分野のWebサイト兼コミュニティプロジェクト。",
     tags: ["Quantum Computing", "Community", "Education", "Web Platform"],
     liveUrl: "https://aliceinquantum.land",
-    faviconUrl: "/project-icons/alice-in-quantumland.svg",
+    faviconUrl: "https://github.com/user-attachments/assets/635f90ad-0067-401e-ac20-375e400fdacf",
     websiteOnly: true
   }
 ];
