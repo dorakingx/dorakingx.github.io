@@ -1,11 +1,16 @@
 import type { Project } from "@/data/projects";
+import type { Locale } from "@/data/translations";
 
 type ProjectCardProps = {
   project: Project;
+  locale?: Locale;
 };
 
-export default function ProjectCard({ project }: ProjectCardProps) {
-  const repositoryUrl = `https://github.com/dorakingx/${project.repositoryName}`;
+export default function ProjectCard({ project, locale = "en" }: ProjectCardProps) {
+  const repositoryUrl = project.repositoryName
+    ? `https://github.com/dorakingx/${project.repositoryName}`
+    : null;
+  const badge = project.websiteOnly ? (locale === "ja" ? "ウェブサイト" : "Website") : "OSS";
 
   return (
     <article className="glow-border group flex h-full flex-col rounded-lg">
@@ -13,7 +18,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex items-start justify-between gap-4">
           <h3 className="text-2xl font-semibold tracking-normal text-white">{project.name}</h3>
           <span className="rounded-full border border-teal-300/25 bg-teal-300/10 px-3 py-1 text-xs font-medium text-teal-100">
-            OSS
+            {badge}
           </span>
         </div>
         <p className="mt-4 flex-1 text-base leading-7 text-zinc-300">{project.description}</p>
@@ -25,18 +30,30 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
         <div className="mt-7 flex flex-wrap gap-3">
-          <a
-            href={repositoryUrl}
-            className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
-          >
-            GitHub Repository
-          </a>
+          {repositoryUrl ? (
+            <a
+              href={repositoryUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
+            >
+              {locale === "ja" ? "GitHubリポジトリ" : "GitHub Repository"}
+            </a>
+          ) : null}
           {project.liveUrl ? (
             <a
               href={project.liveUrl}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-md border border-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:border-teal-200/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-teal-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
             >
-              Live Demo
+              {project.websiteOnly
+                ? locale === "ja"
+                  ? "ウェブサイトを見る"
+                  : "Visit Website"
+                : locale === "ja"
+                  ? "ライブデモ"
+                  : "Live Demo"}
             </a>
           ) : null}
         </div>
