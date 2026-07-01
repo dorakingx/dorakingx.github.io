@@ -15,7 +15,7 @@ export default function FeaturedProjects({ locale = "en" }: Props) {
     <section id="projects" className="px-6 py-20 sm:px-10 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <SectionHeader eyebrow={t.eyebrow} title={t.title} description={t.description} />
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <ProjectCard
               key={project.repositoryName ?? project.name}
