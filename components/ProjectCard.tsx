@@ -16,8 +16,20 @@ export default function ProjectCard({ project, locale = "en" }: ProjectCardProps
     <article className="glow-border group flex h-full flex-col rounded-lg">
       <div className="glass-panel flex h-full flex-col rounded-lg p-6 transition duration-200 group-hover:-translate-y-1">
         <div className="flex items-start justify-between gap-4">
-          <h3 className="text-2xl font-semibold tracking-normal text-white">{project.name}</h3>
-          <span className="rounded-full border border-teal-300/25 bg-teal-300/10 px-3 py-1 text-xs font-medium text-teal-100">
+          <div className="flex min-w-0 items-center gap-3">
+            <img
+              src={project.faviconUrl}
+              alt=""
+              aria-hidden="true"
+              width={28}
+              height={28}
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              className="h-7 w-7 shrink-0 rounded-md bg-white/10 object-contain p-0.5"
+            />
+            <h3 className="min-w-0 text-2xl font-semibold tracking-normal text-white">{project.name}</h3>
+          </div>
+          <span className="shrink-0 rounded-full border border-teal-300/25 bg-teal-300/10 px-3 py-1 text-xs font-medium text-teal-100">
             {badge}
           </span>
         </div>
