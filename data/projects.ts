@@ -16,7 +16,8 @@ export const projects: Project[] = [
       "AI-powered creative writing and novel development tool for generating, organizing, and improving stories.",
     descriptionJa:
       "ストーリーの生成・整理・改善のためのAI搭載クリエイティブライティング・小説開発ツール。",
-    tags: ["AI", "Writing Tool", "Creative Tech", "Web App"]
+    tags: ["AI", "Writing Tool", "Creative Tech", "Web App"],
+    liveUrl: "https://novelpilot.vercel.app"
   },
   {
     name: "Qisquiz",
@@ -25,7 +26,8 @@ export const projects: Project[] = [
       "Quantum computing quiz and exam preparation app designed to help learners practice quantum computing concepts.",
     descriptionJa:
       "学習者が量子コンピューティングの概念を練習するための量子コンピューティングクイズ・試験準備アプリ。",
-    tags: ["Quantum Computing", "Education", "Quiz App", "Qiskit"]
+    tags: ["Quantum Computing", "Education", "Quiz App", "Qiskit"],
+    liveUrl: "https://qisquiz.vercel.app"
   },
   {
     name: "musiq",
@@ -34,7 +36,8 @@ export const projects: Project[] = [
       "Experimental project exploring the intersection of quantum computing, OpenQASM, and music.",
     descriptionJa:
       "量子コンピューティング、OpenQASM、音楽の交差点を探求する実験的プロジェクト。",
-    tags: ["Quantum Music", "OpenQASM", "Creative Coding", "Quantum Computing"]
+    tags: ["Quantum Music", "OpenQASM", "Creative Coding", "Quantum Computing"],
+    liveUrl: "https://musiquantum.vercel.app/"
   },
   {
     name: "AlphaQuoridor",
