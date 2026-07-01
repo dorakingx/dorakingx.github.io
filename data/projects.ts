@@ -5,6 +5,7 @@ export type Project = {
   descriptionJa: string;
   tags: string[];
   liveUrl?: string;
+  faviconUrl: string;
   websiteOnly?: boolean;
 };
 
@@ -17,7 +18,8 @@ export const projects: Project[] = [
     descriptionJa:
       "ストーリーの生成・整理・改善のためのAI搭載クリエイティブライティング・小説開発ツール。",
     tags: ["AI", "Writing Tool", "Creative Tech", "Web App"],
-    liveUrl: "https://novelpilot.vercel.app"
+    liveUrl: "https://novelpilot.vercel.app",
+    faviconUrl: "https://novelpilot.vercel.app/favicon.ico"
   },
   {
     name: "Qisquiz",
@@ -27,7 +29,8 @@ export const projects: Project[] = [
     descriptionJa:
       "学習者が量子コンピューティングの概念を練習するための量子コンピューティングクイズ・試験準備アプリ。",
     tags: ["Quantum Computing", "Education", "Quiz App", "Qiskit"],
-    liveUrl: "https://qisquiz.vercel.app"
+    liveUrl: "https://qisquiz.vercel.app",
+    faviconUrl: "https://qisquiz.vercel.app/favicon.ico"
   },
   {
     name: "musiq",
@@ -37,7 +40,8 @@ export const projects: Project[] = [
     descriptionJa:
       "量子コンピューティング、OpenQASM、音楽の交差点を探求する実験的プロジェクト。",
     tags: ["Quantum Music", "OpenQASM", "Creative Coding", "Quantum Computing"],
-    liveUrl: "https://musiquantum.vercel.app/"
+    liveUrl: "https://musiquantum.vercel.app/",
+    faviconUrl: "https://musiquantum.vercel.app/favicon.ico"
   },
   {
     name: "AlphaQuoridor",
@@ -46,7 +50,8 @@ export const projects: Project[] = [
       "AlphaZero-style AI project for the board game Quoridor, combining game AI, search, and reinforcement-learning-inspired methods.",
     descriptionJa:
       "ボードゲーム「コリドー」のためのAlphaZeroスタイルAIプロジェクト。ゲームAI・探索・強化学習に着想を得た手法を組み合わせています。",
-    tags: ["Game AI", "AlphaZero", "Python", "Reinforcement Learning"]
+    tags: ["Game AI", "AlphaZero", "Python", "Reinforcement Learning"],
+    faviconUrl: "https://github.com/favicon.ico"
   },
   {
     name: "Alice in Quantumland",
@@ -56,6 +61,7 @@ export const projects: Project[] = [
       "量子のアイデアをより身近で魅力的に伝えることを目指した、量子分野のWebサイト兼コミュニティプロジェクト。",
     tags: ["Quantum Computing", "Community", "Education", "Web Platform"],
     liveUrl: "https://aliceinquantum.land",
+    faviconUrl: "https://aliceinquantum.land/favicon.ico",
     websiteOnly: true
   }
 ];
