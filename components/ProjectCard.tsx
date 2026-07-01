@@ -47,13 +47,7 @@ export default function ProjectCard({ project, locale = "en" }: ProjectCardProps
               rel="noreferrer"
               className="rounded-md border border-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:border-teal-200/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-teal-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
             >
-              {project.websiteOnly
-                ? locale === "ja"
-                  ? "ウェブサイトを見る"
-                  : "Visit Website"
-                : locale === "ja"
-                  ? "ライブデモ"
-                  : "Live Demo"}
+              {locale === "ja" ? "ウェブサイトを見る" : "Visit Website"}
             </a>
           ) : null}
         </div>
