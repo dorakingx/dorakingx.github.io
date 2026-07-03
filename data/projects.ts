@@ -30,7 +30,7 @@ export const projects: Project[] = [
       "学習者が量子コンピューティングの概念を練習するための量子コンピューティングクイズ・試験準備アプリ。",
     tags: ["Quantum Computing", "Education", "Quiz App", "Qiskit"],
     liveUrl: "https://qisquiz.vercel.app",
-    faviconUrl: "https://github.com/user-attachments/assets/97c97586-286a-4577-8d54-1bb91f9ebb61"
+    faviconUrl: "https://raw.githubusercontent.com/dorakingx/qisquiz/main/src/app/icon.png"
   },
   {
     name: "musiq",
