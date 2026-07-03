@@ -1,5 +1,6 @@
 import type { Project } from "@/data/projects";
 import type { Locale } from "@/data/translations";
+import Image from "next/image";
 
 type ProjectCardProps = {
   project: Project;
@@ -17,7 +18,7 @@ export default function ProjectCard({ project, locale = "en" }: ProjectCardProps
       <div className="glass-panel flex h-full flex-col rounded-lg p-6 transition duration-200 group-hover:-translate-y-1">
         <div className="flex items-start justify-between gap-4">
           <div className="flex min-w-0 items-center gap-3">
-            <img
+            <Image
               src={project.faviconUrl}
               alt=""
               aria-hidden="true"
