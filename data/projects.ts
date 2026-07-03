@@ -61,7 +61,7 @@ export const projects: Project[] = [
       "量子のアイデアをより身近で魅力的に伝えることを目指した、量子分野のWebサイト兼コミュニティプロジェクト。",
     tags: ["Quantum Computing", "Community", "Education", "Web Platform"],
     liveUrl: "https://aliceinquantum.land",
-    faviconUrl: "/project-icons/alice-in-quantumland.svg",
+    faviconUrl: "/project-icons/alice-in-quantumland.png",
     websiteOnly: true
   }
 ];
