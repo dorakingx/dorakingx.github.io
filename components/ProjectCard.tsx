@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import type { Project } from "@/data/projects";
 import type { Locale } from "@/data/translations";
 
