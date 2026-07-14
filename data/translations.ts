@@ -92,7 +92,7 @@ export const translations = {
       title: "野心的な実験でコラボレーション",
       body: "コラボレーション、研究機会、ハッカソン、OSSプロジェクト、フリーランスの仕事を歓迎しています。",
       links: [
-        { label: "X/Twitter", href: "https://x.com/doraking_ja" }
+        { label: "X/Twitter", href: "https://x.com/doraking_jp" }
       ]
     }
   }
