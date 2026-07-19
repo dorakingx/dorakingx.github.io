@@ -35,7 +35,7 @@ export const projects: Project[] = [
       "AIの待ち時間を短い英語リスニング学習に変える、ローカルファーストのChrome拡張機能。",
     tags: ["TypeScript", "React", "Manifest V3", "Web Speech API"],
     liveUrl: "https://aiterval-build-week.vercel.app/demo/judge",
-    faviconUrl: "https://aiterval-build-week.vercel.app/icon",
+    faviconUrl: "/project-icons/aiterval.svg",
     actions: [
       {
         label: "View Project",
