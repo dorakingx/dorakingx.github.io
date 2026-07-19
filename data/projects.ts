@@ -1,15 +1,96 @@
 export type Project = {
   name: string;
   repositoryName?: string;
+  releaseDate?: string;
+  releaseDateJa?: string;
+  category?: string;
+  categoryJa?: string;
   description: string;
   descriptionJa: string;
+  extendedDescription?: string;
+  extendedDescriptionJa?: string;
   tags: string[];
+  tagsJa?: string[];
   liveUrl?: string;
   faviconUrl: string;
+  previewImageUrl?: string;
+  previewAlt?: string;
+  previewAltJa?: string;
+  actions?: {
+    label: string;
+    labelJa?: string;
+    href: string;
+    variant?: "primary" | "secondary";
+  }[];
   websiteOnly?: boolean;
 };
 
 export const projects: Project[] = [
+  {
+    name: "AIterval",
+    repositoryName: "aiterval",
+    releaseDate: "July 2026",
+    releaseDateJa: "2026年7月",
+    category: "Chrome Extension / EdTech",
+    categoryJa: "Chrome拡張機能 / EdTech",
+    description:
+      "A local-first Chrome extension that turns the time spent waiting for AI into 15-90 second English listening exercises. It supports ChatGPT, Claude, and Gemini without reading prompts or responses.",
+    descriptionJa:
+      "AIの回答を待つ時間を15〜90秒の英語リスニング学習に変える、ローカルファーストのChrome拡張機能。プロンプトや回答を読み取らず、ChatGPT、Claude、Geminiに対応しています。",
+    extendedDescription:
+      "AIterval detects when an AI assistant is generating and presents a short listening exercise from a library of 132 original pre-authored questions. Learning history, review scheduling, weak-skill signals, and preferences remain on the user's device. When the AI becomes ready, the current audio continues without being interrupted.",
+    extendedDescriptionJa:
+      "AItervalはAIアシスタントの回答生成中を検知し、132問のオリジナル事前作成問題から短いリスニング課題を表示します。学習履歴、復習予定、苦手分野、設定は端末内に保存されます。AIの回答が完了しても、再生中の音声は途切れず最後まで聞くことができます。",
+    tags: [
+      "OpenAI Codex",
+      "GPT-5.6",
+      "TypeScript",
+      "React",
+      "Chrome Extension",
+      "Manifest V3",
+      "Web Speech API",
+      "Playwright",
+      "Vercel",
+      "OpenAI Build Week - Education"
+    ],
+    tagsJa: [
+      "OpenAI Codex",
+      "GPT-5.6",
+      "TypeScript",
+      "React",
+      "Chrome Extension",
+      "Manifest V3",
+      "Web Speech API",
+      "Playwright",
+      "Vercel",
+      "OpenAI Build Week 教育部門"
+    ],
+    liveUrl: "https://aiterval-build-week.vercel.app/demo/judge",
+    faviconUrl: "https://aiterval-build-week.vercel.app/icon",
+    previewImageUrl: "/project-icons/aiterval-thumbnail.png",
+    previewAlt: "AIterval English listening exercise interface",
+    previewAltJa: "AItervalの英語リスニング学習画面",
+    actions: [
+      {
+        label: "View Project",
+        labelJa: "プロジェクトを見る",
+        href: "https://devpost.com/software/aiterval",
+        variant: "primary"
+      },
+      {
+        label: "Live Demo",
+        labelJa: "デモを試す",
+        href: "https://aiterval-build-week.vercel.app/demo/judge",
+        variant: "secondary"
+      },
+      {
+        label: "GitHub",
+        labelJa: "GitHub",
+        href: "https://github.com/dorakingx/aiterval",
+        variant: "secondary"
+      }
+    ]
+  },
   {
     name: "NovelPilot",
     repositoryName: "novelpilot",
