@@ -29,10 +29,6 @@ export const projects: Project[] = [
   {
     name: "AIterval",
     repositoryName: "aiterval",
-    releaseDate: "July 2026",
-    releaseDateJa: "2026年7月",
-    category: "Chrome Extension / EdTech",
-    categoryJa: "Chrome拡張機能 / EdTech",
     description:
       "A local-first Chrome extension that turns AI waiting time into short English listening practice.",
     descriptionJa:
@@ -40,9 +36,6 @@ export const projects: Project[] = [
     tags: ["TypeScript", "React", "Manifest V3", "Web Speech API"],
     liveUrl: "https://aiterval-build-week.vercel.app/demo/judge",
     faviconUrl: "https://aiterval-build-week.vercel.app/icon",
-    previewImageUrl: "/project-icons/aiterval-thumbnail.png",
-    previewAlt: "AIterval English listening exercise interface",
-    previewAltJa: "AItervalの英語リスニング学習画面",
     actions: [
       {
         label: "View Project",
