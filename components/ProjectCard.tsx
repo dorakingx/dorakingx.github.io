@@ -2,6 +2,7 @@
 
 import type { Project } from "@/data/projects";
 import type { Locale } from "@/data/translations";
+import { getProjectMetadataItems } from "@/lib/project-metadata";
 
 type ProjectCardProps = {
   project: Project;
@@ -9,6 +10,8 @@ type ProjectCardProps = {
 };
 
 export default function ProjectCard({ project, locale = "en" }: ProjectCardProps) {
+  const metadataItems = getProjectMetadataItems(project, locale);
+
   return (
     <article className="glow-border group flex h-full flex-col rounded-lg">
       <div className="glass-panel flex h-full flex-col rounded-lg p-6 transition duration-200 group-hover:-translate-y-1">
@@ -31,6 +34,23 @@ export default function ProjectCard({ project, locale = "en" }: ProjectCardProps
           </span>
         </div>
         <p className="mt-4 text-base leading-7 text-zinc-300">{project.description}</p>
+        {metadataItems.length > 0 ? (
+          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-zinc-400">
+            {metadataItems.map((item) =>
+              item.key === "updated" ? (
+                <time key={item.key} dateTime={item.dateTime}>
+                  {item.label}
+                </time>
+              ) : item.key === "stars" ? (
+                <span key={item.key} aria-label={item.ariaLabel}>
+                  <span aria-hidden="true">★</span> {item.count}
+                </span>
+              ) : (
+                <span key={item.key}>{item.label}</span>
+              )
+            )}
+          </div>
+        ) : null}
         <div className="flex-1" />
         <div className="mt-6 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
