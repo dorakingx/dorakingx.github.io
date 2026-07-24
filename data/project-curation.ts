@@ -15,6 +15,16 @@ export type ProjectCuration = {
  * overwrites this file.
  */
 export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = {
+  aiterval: {
+    displayName: "AIterval",
+    description:
+      "A local-first Chrome extension that turns AI waiting time into short English listening practice.",
+    descriptionJa:
+      "AIの待ち時間を短い英語リスニング学習に変える、ローカルファーストのChrome拡張機能。",
+    tags: ["TypeScript", "React", "Manifest V3", "Web Speech API"],
+    faviconUrl: "/project-icons/aiterval.svg",
+    liveUrlOverride: "https://aiterval-build-week.vercel.app/demo/judge"
+  },
   novelpilot: {
     displayName: "NovelPilot",
     description:

@@ -6,6 +6,7 @@
  * automatically.
  */
 export const selectedRepositoryNames = [
+  "aiterval",
   "novelpilot",
   "qisquiz",
   "musiq",

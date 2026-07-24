@@ -17,6 +17,17 @@ export type GitHubProjectMetadata = {
 
 export const githubProjectMetadata = [
   {
+    "repositoryName": "aiterval",
+    "owner": "dorakingx",
+    "githubUrl": "https://github.com/dorakingx/aiterval",
+    "description": null,
+    "homepageUrl": "https://aiterval-build-week.vercel.app/",
+    "primaryLanguage": "TypeScript",
+    "topics": [],
+    "starCount": 0,
+    "updatedAt": "2026-07-19T09:18:51Z"
+  },
+  {
     "repositoryName": "novelpilot",
     "owner": "dorakingx",
     "githubUrl": "https://github.com/dorakingx/novelpilot",
