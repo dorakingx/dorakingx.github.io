@@ -2,23 +2,15 @@
 
 import type { Project } from "@/data/projects";
 import type { Locale } from "@/data/translations";
+import { getProjectMetadataItems } from "@/lib/project-metadata";
 
 type ProjectCardProps = {
   project: Project;
   locale?: Locale;
 };
 
-function formatUpdatedAt(updatedAt: string, locale: Locale) {
-  return new Intl.DateTimeFormat(locale === "ja" ? "ja-JP" : "en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-    timeZone: "UTC"
-  }).format(new Date(updatedAt));
-}
-
 export default function ProjectCard({ project, locale = "en" }: ProjectCardProps) {
-  const formattedUpdatedAt = formatUpdatedAt(project.updatedAt, locale);
+  const metadataItems = getProjectMetadataItems(project, locale);
 
   return (
     <article className="glow-border group flex h-full flex-col rounded-lg">
@@ -42,15 +34,23 @@ export default function ProjectCard({ project, locale = "en" }: ProjectCardProps
           </span>
         </div>
         <p className="mt-4 text-base leading-7 text-zinc-300">{project.description}</p>
-        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-zinc-400">
-          <span aria-label={locale === "ja" ? `スター ${project.starCount}` : `${project.starCount} stars`}>
-            ★ {project.starCount}
-          </span>
-          {project.primaryLanguage ? <span>{project.primaryLanguage}</span> : null}
-          <time dateTime={project.updatedAt}>
-            {locale === "ja" ? `更新 ${formattedUpdatedAt}` : `Updated ${formattedUpdatedAt}`}
-          </time>
-        </div>
+        {metadataItems.length > 0 ? (
+          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-zinc-400">
+            {metadataItems.map((item) =>
+              item.key === "updated" ? (
+                <time key={item.key} dateTime={item.dateTime}>
+                  {item.label}
+                </time>
+              ) : item.key === "stars" ? (
+                <span key={item.key} aria-label={item.ariaLabel}>
+                  <span aria-hidden="true">★</span> {item.count}
+                </span>
+              ) : (
+                <span key={item.key}>{item.label}</span>
+              )
+            )}
+          </div>
+        ) : null}
         <div className="flex-1" />
         <div className="mt-6 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
