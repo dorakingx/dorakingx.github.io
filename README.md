@@ -157,6 +157,12 @@ manual dispatch. When generated metadata changes, it updates the dedicated
 does not commit directly to `main`, create empty pull requests, or add newly
 discovered repositories to the allowlist.
 
+Pull requests are validated by `.github/workflows/ci.yml`. A pull request
+created by the weekly workflow with `GITHUB_TOKEN` may wait for a maintainer to
+click **Approve workflows to run** before pull-request CI starts. This
+automation does not use a personal access token, GitHub App token, or additional
+secret.
+
 ## Updating Skills
 
 Skill groups live in `data/skills.ts`. Each group has an English `name` and a Japanese `nameJa`.
