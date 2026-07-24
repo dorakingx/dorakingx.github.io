@@ -84,27 +84,78 @@ Use `dorakingx.github.io` for this portfolio website. Do not use a repository si
 
 ## Updating Projects
 
-Featured project content lives in `data/projects.ts`. Each project has both an English (`description`) and Japanese (`descriptionJa`) description.
+Selected Projects uses an explicit allowlist. It never discovers or displays every public repository automatically.
 
-Keep the portfolio focused on these four repositories unless the site strategy changes:
+The display order and repository allowlist live in:
+
+```text
+data/selected-repositories.ts
+```
+
+The initial selection is:
 
 - `novelpilot`
 - `qisquiz`
 - `musiq`
 - `AlphaQuoridor`
 
-To add a live demo later, add a `liveUrl` field to a project:
+Human-authored portfolio content lives in:
 
-```ts
-{
-  name: "NovelPilot",
-  repositoryName: "novelpilot",
-  description: "...",
-  descriptionJa: "...",
-  tags: ["AI", "Writing Tool"],
-  liveUrl: "https://example.com"
-}
+```text
+data/project-curation.ts
 ```
+
+This file preserves:
+
+- English and Japanese descriptions
+- custom display names and tags
+- custom icons/favicons
+- optional live website URL overrides
+
+GitHub API metadata is generated into:
+
+```text
+data/github-projects.generated.ts
+```
+
+The generated fields are repository name, owner, GitHub URL, GitHub description,
+homepage URL, primary language, topics, star count, and last-updated timestamp.
+Do not edit the generated file manually.
+
+### Add a selected repository
+
+1. Add the exact repository name to `selectedRepositoryNames` in
+   `data/selected-repositories.ts`.
+2. Add the matching English/Japanese curation entry to
+   `data/project-curation.ts`.
+3. Run:
+
+```bash
+npm run sync:github-projects
+```
+
+The sync script includes the repository only when it is public, owned by
+`dorakingx`, and is not a fork, archived repository, or template.
+
+### Remove a selected repository
+
+1. Remove its name from `data/selected-repositories.ts`.
+2. Remove its curation entry from `data/project-curation.ts`.
+3. Run `npm run sync:github-projects`.
+
+### Website buttons
+
+The GitHub Repository button is always displayed. Visit Website is displayed
+only when GitHub provides a valid HTTP(S) homepage or the curation entry provides
+a valid `liveUrlOverride`.
+
+### Automated metadata updates
+
+`.github/workflows/sync-selected-repositories.yml` runs weekly and supports
+manual dispatch. When generated metadata changes, it updates the dedicated
+`automation/sync-selected-repositories` branch and opens a pull request. It
+does not commit directly to `main`, create empty pull requests, or add newly
+discovered repositories to the allowlist.
 
 ## Updating Skills
 
@@ -113,4 +164,3 @@ Skill groups live in `data/skills.ts`. Each group has an English `name` and a Ja
 ## Updating Translations
 
 All other UI text (hero, about, section headers, contact links, etc.) lives in `data/translations.ts`, organised by locale (`en` / `ja`).
-

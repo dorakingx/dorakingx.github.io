@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "lint": "eslint . --max-warnings=0"
+    "lint": "eslint . --max-warnings=0",
+    "sync:github-projects": "node scripts/sync-github-projects.mjs"
   },
   "dependencies": {
     "next": "^15.5.19",

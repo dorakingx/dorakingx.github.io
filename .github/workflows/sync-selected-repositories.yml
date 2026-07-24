@@ -1,0 +1,96 @@
+name: Sync selected GitHub repositories
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-selected-github-repositories
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync selected repository metadata
+        run: npm run sync:github-projects
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for metadata changes
+        id: changes
+        shell: bash
+        run: |
+          if git diff --quiet -- data/github-projects.generated.ts; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validate generated portfolio
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          npm run lint
+          npm run build
+
+      - name: Create or update metadata pull request
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          branch="automation/sync-selected-repositories"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
+            git fetch origin "$branch:refs/remotes/origin/$branch"
+          fi
+
+          git switch -C "$branch"
+          git add -- data/github-projects.generated.ts
+          git commit -m "chore: sync selected repository metadata"
+          git push --force-with-lease origin "$branch"
+
+          existing_pr="$(gh pr list --state open --head "$branch" --json number --jq '.[0].number // empty')"
+
+          if [ -z "$existing_pr" ]; then
+            body_file="$(mktemp)"
+            printf '%s\n' \
+              "## Summary" \
+              "" \
+              "- refresh metadata for explicitly allowlisted portfolio repositories" \
+              "- preserve manually curated descriptions, tags, icons, and display order" \
+              "- exclude repositories that are private, forked, archived, templates, or not owned by dorakingx" \
+              "" \
+              "## Validation" \
+              "" \
+              "- npm run lint" \
+              "- npm run build" > "$body_file"
+
+            gh pr create \
+              --base main \
+              --head "$branch" \
+              --title "chore: sync selected repository metadata" \
+              --body-file "$body_file"
+          fi

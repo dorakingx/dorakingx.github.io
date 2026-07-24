@@ -22,14 +22,7 @@ export default function FeaturedProjects({ locale = "en" }: Props) {
               locale={locale}
               project={{
                 ...project,
-                category: locale === "ja" ? project.categoryJa ?? project.category : project.category,
                 description: locale === "ja" ? project.descriptionJa : project.description,
-                extendedDescription:
-                  locale === "ja"
-                    ? project.extendedDescriptionJa ?? project.extendedDescription
-                    : project.extendedDescription,
-                previewAlt: locale === "ja" ? project.previewAltJa ?? project.previewAlt : project.previewAlt,
-                releaseDate: locale === "ja" ? project.releaseDateJa ?? project.releaseDate : project.releaseDate,
                 tags: locale === "ja" ? project.tagsJa ?? project.tags : project.tags
               }}
             />
