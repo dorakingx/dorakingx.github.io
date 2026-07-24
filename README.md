@@ -86,14 +86,16 @@ Use `dorakingx.github.io` for this portfolio website. Do not use a repository si
 
 Selected Projects uses an explicit allowlist. It never discovers or displays every public repository automatically.
 
-The display order and repository allowlist live in:
+The repository allowlist lives in:
 
 ```text
 data/selected-repositories.ts
 ```
 
-The initial selection is:
+The array order controls the Selected Projects display order. The current
+selection is:
 
+- `aiterval`
 - `novelpilot`
 - `qisquiz`
 - `musiq`
