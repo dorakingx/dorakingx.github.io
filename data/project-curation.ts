@@ -32,7 +32,7 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
     descriptionJa:
       "ストーリーの生成・整理・改善のためのAI搭載クリエイティブライティング・小説開発ツール。",
     tags: ["AI", "Writing Tool", "Creative Tech", "Web App"],
-    faviconUrl: "https://github.com/dorakingx/novelpilot/raw/main/app/favicon.ico",
+    faviconUrl: "/project-icons/novelpilot.png",
     liveUrlOverride: "https://novelpilot.vercel.app"
   },
   qisquiz: {
