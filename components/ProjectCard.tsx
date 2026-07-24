@@ -8,7 +8,18 @@ type ProjectCardProps = {
   locale?: Locale;
 };
 
+function formatUpdatedAt(updatedAt: string, locale: Locale) {
+  return new Intl.DateTimeFormat(locale === "ja" ? "ja-JP" : "en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC"
+  }).format(new Date(updatedAt));
+}
+
 export default function ProjectCard({ project, locale = "en" }: ProjectCardProps) {
+  const formattedUpdatedAt = formatUpdatedAt(project.updatedAt, locale);
+
   return (
     <article className="glow-border group flex h-full flex-col rounded-lg">
       <div className="glass-panel flex h-full flex-col rounded-lg p-6 transition duration-200 group-hover:-translate-y-1">
@@ -31,6 +42,15 @@ export default function ProjectCard({ project, locale = "en" }: ProjectCardProps
           </span>
         </div>
         <p className="mt-4 text-base leading-7 text-zinc-300">{project.description}</p>
+        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-zinc-400">
+          <span aria-label={locale === "ja" ? `スター ${project.starCount}` : `${project.starCount} stars`}>
+            ★ {project.starCount}
+          </span>
+          {project.primaryLanguage ? <span>{project.primaryLanguage}</span> : null}
+          <time dateTime={project.updatedAt}>
+            {locale === "ja" ? `更新 ${formattedUpdatedAt}` : `Updated ${formattedUpdatedAt}`}
+          </time>
+        </div>
         <div className="flex-1" />
         <div className="mt-6 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
