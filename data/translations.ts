@@ -26,7 +26,7 @@ export const translations = {
       eyebrow: "Featured Projects",
       title: "Selected Projects",
       description:
-        "A compact selection of shipped apps and research-driven experiments across AI-assisted learning, writing, quantum education, music, games, and community building."
+        "A curated selection of public repositories spanning AI writing, quantum education, quantum music, and game AI."
     },
     skills: {
       eyebrow: "Skills",
@@ -74,7 +74,7 @@ export const translations = {
       eyebrow: "注目プロジェクト",
       title: "選定プロジェクト",
       description:
-        "AI支援学習、AI執筆、量子教育、量子音楽、ゲーム、コミュニティづくりにわたる公開アプリと研究駆動の実験的プロジェクト。"
+        "AI執筆、量子教育、量子音楽、ゲームAIにわたる、公開リポジトリから厳選したプロジェクト。"
     },
     skills: {
       eyebrow: "スキル",
