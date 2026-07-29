@@ -100,6 +100,7 @@ selection is:
 - `qisquiz`
 - `musiq`
 - `AlphaQuoridor`
+- `aliceinquantumland`
 
 Human-authored portfolio content lives in:
 
