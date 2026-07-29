@@ -70,5 +70,23 @@ export const githubProjectMetadata = [
     "topics": [],
     "starCount": 1,
     "updatedAt": "2025-08-16T11:18:18Z"
+  },
+  {
+    "repositoryName": "aliceinquantumland",
+    "owner": "dorakingx",
+    "githubUrl": "https://github.com/dorakingx/aliceinquantumland",
+    "description": "Free bilingual, accountless, local-first quantum computing course with interactive simulations.",
+    "homepageUrl": "https://aliceinquantum.land/",
+    "primaryLanguage": "TypeScript",
+    "topics": [
+      "bilingual",
+      "education",
+      "local-first",
+      "nextjs",
+      "quantum-computing",
+      "typescript"
+    ],
+    "starCount": 0,
+    "updatedAt": "2026-07-29T04:34:15Z"
   }
 ] as const satisfies readonly GitHubProjectMetadata[];

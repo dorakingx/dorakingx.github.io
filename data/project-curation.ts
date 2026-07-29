@@ -64,5 +64,15 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
       "ボードゲーム「コリドー」のためのAlphaZeroスタイルAIプロジェクト。ゲームAI・探索・強化学習に着想を得た手法を組み合わせています。",
     tags: ["Game AI", "AlphaZero", "Python", "Reinforcement Learning"],
     faviconUrl: "https://github.com/dorakingx/AlphaQuoridor/raw/main/images/quoridor.png"
+  },
+  aliceinquantumland: {
+    displayName: "Alice in Quantumland",
+    description:
+      "A quantum-focused website and community project designed to make quantum ideas more approachable and engaging.",
+    descriptionJa:
+      "量子のアイデアをより身近で魅力的に伝えることを目指した、量子分野のWebサイト兼コミュニティプロジェクト。",
+    tags: ["Quantum Computing", "Community", "Education", "Web Platform"],
+    faviconUrl: "/project-icons/alice-in-quantumland.png",
+    liveUrlOverride: "https://aliceinquantum.land"
   }
 };
