@@ -101,6 +101,7 @@ selection is:
 - `musiq`
 - `AlphaQuoridor`
 - `aliceinquantumland`
+- `QSimCity`
 
 Human-authored portfolio content lives in:
 

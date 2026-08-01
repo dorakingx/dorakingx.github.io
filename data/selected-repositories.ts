@@ -11,7 +11,8 @@ export const selectedRepositoryNames = [
   "qisquiz",
   "musiq",
   "AlphaQuoridor",
-  "aliceinquantumland"
+  "aliceinquantumland",
+  "QSimCity"
 ] as const;
 
 export type SelectedRepositoryName = (typeof selectedRepositoryNames)[number];

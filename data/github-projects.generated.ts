@@ -88,5 +88,16 @@ export const githubProjectMetadata = [
     ],
     "starCount": 0,
     "updatedAt": "2026-07-29T04:34:15Z"
+  },
+  {
+    "repositoryName": "QSimCity",
+    "owner": "dorakingx",
+    "githubUrl": "https://github.com/dorakingx/QSimCity",
+    "description": "An explorable 3D quantum city driven by real computation traces. Unofficial, independent educational and research visualization project.",
+    "homepageUrl": "https://qsimcity.vercel.app/",
+    "primaryLanguage": "TypeScript",
+    "topics": [],
+    "starCount": 0,
+    "updatedAt": "2026-07-31T09:44:58Z"
   }
 ] as const satisfies readonly GitHubProjectMetadata[];

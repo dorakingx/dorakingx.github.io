@@ -74,5 +74,16 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
     tags: ["Quantum Computing", "Community", "Education", "Web Platform"],
     faviconUrl: "/project-icons/alice-in-quantumland.png",
     liveUrlOverride: "https://aliceinquantum.land"
+  },
+  QSimCity: {
+    displayName: "QSimCity",
+    description:
+      "An explorable 3D quantum city that turns real computation traces into interactive educational visualizations.",
+    descriptionJa:
+      "実際の量子計算トレースを、探索可能な3D都市として可視化する教育・研究プロジェクト。",
+    tags: ["Quantum Computing", "3D Visualization", "OpenQASM", "Education"],
+    faviconUrl:
+      "https://github.com/dorakingx/QSimCity/raw/main/apps/web/public/icons/icon-192.png",
+    liveUrlOverride: "https://qsimcity.vercel.app"
   }
 };
