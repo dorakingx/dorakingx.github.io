@@ -102,6 +102,8 @@ array only controls the allowlist. The current selection is:
 - `AlphaQuoridor`
 - `aliceinquantumland`
 - `QSimCity`
+- `AlphaShor`
+- `quantum-galton-board`
 
 Human-authored portfolio content lives in:
 

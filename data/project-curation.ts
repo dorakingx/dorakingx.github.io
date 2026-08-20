@@ -47,7 +47,7 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
     liveUrlOverride: "https://qisquiz.vercel.app"
   },
   musiq: {
-    displayName: "musiq",
+    displayName: "Musiq",
     description:
       "Experimental project exploring the intersection of quantum computing, OpenQASM, and music.",
     descriptionJa:
@@ -66,7 +66,7 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
     faviconUrl: "https://github.com/dorakingx/AlphaQuoridor/raw/main/images/quoridor.png"
   },
   aliceinquantumland: {
-    displayName: "Alice in Quantumland",
+    displayName: "Alice In Quantumland",
     description:
       "A quantum-focused website and community project designed to make quantum ideas more approachable and engaging.",
     descriptionJa:
@@ -85,5 +85,23 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
     faviconUrl:
       "https://github.com/dorakingx/QSimCity/raw/main/apps/web/public/icons/icon-192.png",
     liveUrlOverride: "https://qsimcity.vercel.app"
+  },
+  AlphaShor: {
+    displayName: "AlphaShor",
+    description:
+      "Scalable quantum cryptanalysis research for the elliptic-curve discrete logarithm problem using reversible arithmetic and phase estimation.",
+    descriptionJa:
+      "可逆算術と位相推定を用いて楕円曲線離散対数問題に取り組む、スケーラブルな量子暗号解読研究プロジェクト。",
+    tags: ["Quantum Computing", "Qiskit", "Cryptography", "Python"],
+    faviconUrl: "https://github.com/favicon.ico"
+  },
+  "quantum-galton-board": {
+    displayName: "Quantum Galton Board",
+    description:
+      "A quantum implementation of the Galton board for simulating probability distributions.",
+    descriptionJa:
+      "確率分布をシミュレーションするための、ガルトンボードの量子実装。",
+    tags: ["Quantum Computing", "Python", "Simulation", "Visualization"],
+    faviconUrl: "https://github.com/favicon.ico"
   }
 };

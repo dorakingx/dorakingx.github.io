@@ -99,5 +99,27 @@ export const githubProjectMetadata = [
     "topics": [],
     "starCount": 0,
     "updatedAt": "2026-07-31T09:44:58Z"
+  },
+  {
+    "repositoryName": "AlphaShor",
+    "owner": "dorakingx",
+    "githubUrl": "https://github.com/dorakingx/AlphaShor",
+    "description": null,
+    "homepageUrl": null,
+    "primaryLanguage": "Python",
+    "topics": [],
+    "starCount": 0,
+    "updatedAt": "2026-04-05T11:22:39Z"
+  },
+  {
+    "repositoryName": "quantum-galton-board",
+    "owner": "dorakingx",
+    "githubUrl": "https://github.com/dorakingx/quantum-galton-board",
+    "description": null,
+    "homepageUrl": null,
+    "primaryLanguage": "Python",
+    "topics": [],
+    "starCount": 0,
+    "updatedAt": "2026-04-18T20:15:26Z"
   }
 ] as const satisfies readonly GitHubProjectMetadata[];
