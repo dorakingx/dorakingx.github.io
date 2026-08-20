@@ -15,7 +15,7 @@ export default function Contact({ locale = "en" }: Props) {
         <SectionHeader eyebrow={t.eyebrow} title={t.title} />
         <div className="glass-panel rounded-lg p-6 sm:p-8">
           <p className="text-center text-lg leading-8 text-zinc-200">{t.body}</p>
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             {t.links.map((link) => (
               <a
                 key={link.label}

@@ -5,7 +5,7 @@ export const translations = {
     hero: {
       badge: "@dorakingx",
       name: "Doraking",
-      tagline: "May the Quantum be with you.",
+      tagline: "May the Quantum be with you",
       description:
         "Quantum computing researcher, AI/Web3 builder, and creator of experimental software products.",
       ctaGithub: "View GitHub",
@@ -45,7 +45,11 @@ export const translations = {
       title: "Collaborate on ambitious experiments",
       body: "Open to collaborations, research opportunities, hackathons, OSS projects, and freelance work.",
       links: [
-        { label: "X/Twitter", href: "https://x.com/doraking_en" }
+        { label: "Medium", href: "https://medium.com/@doraking" },
+        { label: "Substack", href: "https://substack.com/@doraking" },
+        { label: "Bluesky", href: "https://bsky.app/profile/doraking.bsky.social" },
+        { label: "X/Twitter", href: "https://x.com/doraking_en" },
+        { label: "Reddit", href: "https://www.reddit.com/user/dorakingx" }
       ]
     }
   },
@@ -53,7 +57,7 @@ export const translations = {
     hero: {
       badge: "@dorakingx",
       name: "Doraking",
-      tagline: "量子とともにあらんことを。",
+      tagline: "量子と共にあらんことを",
       description:
         "量子コンピューティング研究者、AI/Web3ビルダー、実験的ソフトウェアプロダクトのクリエイター。",
       ctaGithub: "GitHubを見る",
@@ -93,7 +97,11 @@ export const translations = {
       title: "野心的な実験でコラボレーション",
       body: "コラボレーション、研究機会、ハッカソン、OSSプロジェクト、フリーランスの仕事を歓迎しています。",
       links: [
-        { label: "X/Twitter", href: "https://x.com/doraking_en" }
+        { label: "Medium", href: "https://medium.com/@doraking" },
+        { label: "Substack", href: "https://substack.com/@doraking" },
+        { label: "Bluesky", href: "https://bsky.app/profile/doraking.bsky.social" },
+        { label: "X/Twitter", href: "https://x.com/doraking_en" },
+        { label: "Reddit", href: "https://www.reddit.com/user/dorakingx" }
       ]
     }
   }
