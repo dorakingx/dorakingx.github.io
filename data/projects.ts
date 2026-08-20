@@ -75,10 +75,7 @@ export const projects: Project[] = selectedRepositoryNames
       }
     ];
   })
-  .sort((firstProject, secondProject) =>
-    secondProject.updatedAt > firstProject.updatedAt
-      ? 1
-      : secondProject.updatedAt < firstProject.updatedAt
-        ? -1
-        : 0
+  .sort(
+    (firstProject, secondProject) =>
+      Date.parse(secondProject.updatedAt) - Date.parse(firstProject.updatedAt)
   );
