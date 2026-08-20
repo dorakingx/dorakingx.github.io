@@ -45,32 +45,37 @@ const metadataByRepositoryName = new Map(
  * Generated GitHub metadata is combined with human-authored curation here.
  * Missing or ineligible repositories are intentionally omitted.
  */
-export const projects: Project[] = selectedRepositoryNames.flatMap((repositoryName) => {
-  const metadata = metadataByRepositoryName.get(repositoryName);
+export const projects: Project[] = selectedRepositoryNames
+  .flatMap((repositoryName) => {
+    const metadata = metadataByRepositoryName.get(repositoryName);
 
-  if (!metadata) {
-    return [];
-  }
-
-  const curation = projectCuration[repositoryName];
-  const liveUrl = validWebsiteUrl(curation.liveUrlOverride ?? metadata.homepageUrl);
-
-  return [
-    {
-      name: curation.displayName,
-      repositoryName,
-      githubUrl: metadata.githubUrl,
-      description: curation.description,
-      descriptionJa: curation.descriptionJa,
-      tags: curation.tags,
-      tagsJa: curation.tagsJa,
-      liveUrl,
-      faviconUrl: curation.faviconUrl,
-      githubDescription: metadata.description,
-      primaryLanguage: metadata.primaryLanguage,
-      topics: metadata.topics,
-      starCount: metadata.starCount,
-      updatedAt: metadata.updatedAt
+    if (!metadata) {
+      return [];
     }
-  ];
-});
+
+    const curation = projectCuration[repositoryName];
+    const liveUrl = validWebsiteUrl(curation.liveUrlOverride ?? metadata.homepageUrl);
+
+    return [
+      {
+        name: curation.displayName,
+        repositoryName,
+        githubUrl: metadata.githubUrl,
+        description: curation.description,
+        descriptionJa: curation.descriptionJa,
+        tags: curation.tags,
+        tagsJa: curation.tagsJa,
+        liveUrl,
+        faviconUrl: curation.faviconUrl,
+        githubDescription: metadata.description,
+        primaryLanguage: metadata.primaryLanguage,
+        topics: metadata.topics,
+        starCount: metadata.starCount,
+        updatedAt: metadata.updatedAt
+      }
+    ];
+  })
+  .sort(
+    (firstProject, secondProject) =>
+      Date.parse(secondProject.updatedAt) - Date.parse(firstProject.updatedAt)
+  );

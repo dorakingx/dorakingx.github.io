@@ -92,8 +92,8 @@ The repository allowlist lives in:
 data/selected-repositories.ts
 ```
 
-The array order controls the Selected Projects display order. The current
-selection is:
+Selected Projects are displayed by repository update date, newest first. The
+array only controls the allowlist. The current selection is:
 
 - `aiterval`
 - `novelpilot`
