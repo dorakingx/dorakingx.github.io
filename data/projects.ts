@@ -76,5 +76,9 @@ export const projects: Project[] = selectedRepositoryNames
     ];
   })
   .sort((firstProject, secondProject) =>
-    secondProject.updatedAt.localeCompare(firstProject.updatedAt)
+    secondProject.updatedAt > firstProject.updatedAt
+      ? 1
+      : secondProject.updatedAt < firstProject.updatedAt
+        ? -1
+        : 0
   );
