@@ -47,8 +47,8 @@ export const translations = {
       links: [
         { label: "Medium", href: "https://medium.com/@doraking" },
         { label: "Substack", href: "https://substack.com/@doraking" },
+        { label: "X", href: "https://x.com/doraking_en" },
         { label: "Bluesky", href: "https://bsky.app/profile/doraking.bsky.social" },
-        { label: "X/Twitter", href: "https://x.com/doraking_en" },
         { label: "Reddit", href: "https://www.reddit.com/user/dorakingx" }
       ]
     }
@@ -99,8 +99,8 @@ export const translations = {
       links: [
         { label: "Medium", href: "https://medium.com/@doraking" },
         { label: "Substack", href: "https://substack.com/@doraking" },
+        { label: "X", href: "https://x.com/doraking_en" },
         { label: "Bluesky", href: "https://bsky.app/profile/doraking.bsky.social" },
-        { label: "X/Twitter", href: "https://x.com/doraking_en" },
         { label: "Reddit", href: "https://www.reddit.com/user/dorakingx" }
       ]
     }
