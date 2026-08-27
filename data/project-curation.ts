@@ -8,6 +8,7 @@ export type ProjectCuration = {
   tagsJa?: readonly string[];
   faviconUrl: string;
   liveUrlOverride?: string;
+  showGitHubRepository?: boolean;
 };
 
 /**
@@ -73,7 +74,8 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
       "量子のアイデアをより身近で魅力的に伝えることを目指した、量子分野のWebサイト兼コミュニティプロジェクト。",
     tags: ["Quantum Computing", "Community", "Education", "Web Platform"],
     faviconUrl: "/project-icons/alice-in-quantumland.png",
-    liveUrlOverride: "https://aliceinquantum.land"
+    liveUrlOverride: "https://aliceinquantum.land",
+    showGitHubRepository: false
   },
   QSimCity: {
     displayName: "QSimCity",
