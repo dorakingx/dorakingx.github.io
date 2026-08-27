@@ -60,14 +60,16 @@ export default function ProjectCard({ project, locale = "en" }: ProjectCardProps
           ))}
         </div>
         <div className="mt-7 flex flex-wrap gap-3">
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
-          >
-            {locale === "ja" ? "GitHubリポジトリ" : "GitHub Repository"}
-          </a>
+          {project.githubUrl ? (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
+            >
+              {locale === "ja" ? "GitHubリポジトリ" : "GitHub Repository"}
+            </a>
+          ) : null}
           {project.liveUrl ? (
             <a
               href={project.liveUrl}

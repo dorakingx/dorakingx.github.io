@@ -8,7 +8,7 @@ import {
 export type Project = {
   name: string;
   repositoryName: SelectedRepositoryName;
-  githubUrl: string;
+  githubUrl?: string;
   description: string;
   descriptionJa: string;
   tags: readonly string[];
@@ -60,7 +60,8 @@ export const projects: Project[] = selectedRepositoryNames
       {
         name: curation.displayName,
         repositoryName,
-        githubUrl: metadata.githubUrl,
+        githubUrl:
+          curation.showGitHubRepository === false ? undefined : metadata.githubUrl,
         description: curation.description,
         descriptionJa: curation.descriptionJa,
         tags: curation.tags,
