@@ -100,10 +100,7 @@ array only controls the allowlist. The current selection is:
 - `qisquiz`
 - `musiq`
 - `AlphaQuoridor`
-- `aliceinquantumland`
 - `QSimCity`
-- `AlphaShor`
-- `quantum-galton-board`
 
 Human-authored portfolio content lives in:
 
@@ -114,6 +111,7 @@ data/project-curation.ts
 This file preserves:
 
 - English and Japanese descriptions
+- project types (`Library`, `App`, or `Agent`)
 - custom display names and tags
 - custom icons/favicons
 - optional live website URL overrides

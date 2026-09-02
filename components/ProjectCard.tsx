@@ -30,7 +30,7 @@ export default function ProjectCard({ project, locale = "en" }: ProjectCardProps
             <h3 className="min-w-0 text-2xl font-semibold tracking-normal text-white">{project.name}</h3>
           </div>
           <span className="shrink-0 rounded-full border border-teal-300/25 bg-teal-300/10 px-3 py-1 text-xs font-medium text-teal-100">
-            OSS
+            {project.projectType}
           </span>
         </div>
         <p className="mt-4 text-base leading-7 text-zinc-300">{project.description}</p>

@@ -12,9 +12,9 @@ export const translations = {
       ctaProjects: "View Projects",
       ctaContact: "Contact / Collaborate",
       cards: [
-        { term: "Research", detail: "Quantum algorithms and simulation" },
-        { term: "Build", detail: "AI agents, Web3 apps, OSS prototypes" },
-        { term: "Create", detail: "Writing tools, games, music experiments" }
+        { term: "Research", detail: "Quantum computing and quantum algorithms" },
+        { term: "Build", detail: "AI agents and blockchain applications" },
+        { term: "Create", detail: "Open-source tools and experimental software" }
       ]
     },
     about: {
@@ -30,9 +30,9 @@ export const translations = {
     },
     skills: {
       eyebrow: "Skills",
-      title: "Research, engineering, and creative systems",
+      title: "Quantum, AI, and Blockchain",
       description:
-        "Technical range for prototypes that need both scientific rigor and practical product instincts."
+        "Research and product development across quantum computing, AI, and blockchain."
     },
     openSource: {
       eyebrow: "Open Source",
@@ -64,9 +64,9 @@ export const translations = {
       ctaProjects: "プロジェクトを見る",
       ctaContact: "コンタクト / コラボ",
       cards: [
-        { term: "研究", detail: "量子アルゴリズムとシミュレーション" },
-        { term: "開発", detail: "AIエージェント、Web3アプリ、OSSプロトタイプ" },
-        { term: "創作", detail: "ライティングツール、ゲーム、音楽実験" }
+        { term: "研究", detail: "量子コンピューティングと量子アルゴリズム" },
+        { term: "開発", detail: "AIエージェントとブロックチェーンアプリケーション" },
+        { term: "創作", detail: "オープンソースツールと実験的ソフトウェア" }
       ]
     },
     about: {
@@ -82,9 +82,9 @@ export const translations = {
     },
     skills: {
       eyebrow: "スキル",
-      title: "研究・エンジニアリング・クリエイティブシステム",
+      title: "量子、AI、ブロックチェーン",
       description:
-        "科学的厳密さと実践的なプロダクト感覚の両方を必要とするプロトタイプのための技術的な幅。"
+        "量子コンピューティング、AI、ブロックチェーンにわたる研究とプロダクト開発。"
     },
     openSource: {
       eyebrow: "オープンソース",
