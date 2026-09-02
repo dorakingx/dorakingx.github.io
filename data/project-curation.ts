@@ -2,6 +2,7 @@ import type { SelectedRepositoryName } from "@/data/selected-repositories";
 
 export type ProjectCuration = {
   displayName: string;
+  projectType: "Library" | "App" | "Agent";
   description: string;
   descriptionJa: string;
   tags: readonly string[];
@@ -18,6 +19,7 @@ export type ProjectCuration = {
 export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = {
   aiterval: {
     displayName: "AIterval",
+    projectType: "App",
     description:
       "A local-first Chrome extension that turns AI waiting time into short English listening practice.",
     descriptionJa:
@@ -28,6 +30,7 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
   },
   novelpilot: {
     displayName: "NovelPilot",
+    projectType: "Agent",
     description:
       "AI-powered creative writing and novel development tool for generating, organizing, and improving stories.",
     descriptionJa:
@@ -38,6 +41,7 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
   },
   qisquiz: {
     displayName: "Qisquiz",
+    projectType: "App",
     description:
       "Quantum computing quiz and exam preparation app designed to help learners practice quantum computing concepts.",
     descriptionJa:
@@ -49,6 +53,7 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
   },
   musiq: {
     displayName: "Musiq",
+    projectType: "App",
     description:
       "Experimental project exploring the intersection of quantum computing, OpenQASM, and music.",
     descriptionJa:
@@ -59,6 +64,7 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
   },
   AlphaQuoridor: {
     displayName: "AlphaQuoridor",
+    projectType: "Agent",
     description:
       "AlphaZero-style AI project for the board game Quoridor, combining game AI, search, and reinforcement-learning-inspired methods.",
     descriptionJa:
@@ -66,19 +72,9 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
     tags: ["Game AI", "AlphaZero", "Python", "Reinforcement Learning"],
     faviconUrl: "https://github.com/dorakingx/AlphaQuoridor/raw/main/images/quoridor.png"
   },
-  aliceinquantumland: {
-    displayName: "Alice In Quantumland",
-    description:
-      "A quantum-focused website and community project designed to make quantum ideas more approachable and engaging.",
-    descriptionJa:
-      "量子のアイデアをより身近で魅力的に伝えることを目指した、量子分野のWebサイト兼コミュニティプロジェクト。",
-    tags: ["Quantum Computing", "Community", "Education", "Web Platform"],
-    faviconUrl: "/project-icons/alice-in-quantumland.png",
-    liveUrlOverride: "https://aliceinquantum.land",
-    showGitHubRepository: false
-  },
   QSimCity: {
     displayName: "QSimCity",
+    projectType: "App",
     description:
       "An explorable 3D quantum city that turns real computation traces into interactive educational visualizations.",
     descriptionJa:
@@ -87,23 +83,5 @@ export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = 
     faviconUrl:
       "https://github.com/dorakingx/QSimCity/raw/main/apps/web/public/icons/icon-192.png",
     liveUrlOverride: "https://qsimcity.vercel.app"
-  },
-  AlphaShor: {
-    displayName: "AlphaShor",
-    description:
-      "Scalable quantum cryptanalysis research for the elliptic-curve discrete logarithm problem using reversible arithmetic and phase estimation.",
-    descriptionJa:
-      "可逆算術と位相推定を用いて楕円曲線離散対数問題に取り組む、スケーラブルな量子暗号解読研究プロジェクト。",
-    tags: ["Quantum Computing", "Qiskit", "Cryptography", "Python"],
-    faviconUrl: "https://github.com/favicon.ico"
-  },
-  "quantum-galton-board": {
-    displayName: "Quantum Galton Board",
-    description:
-      "A quantum implementation of the Galton board for simulating probability distributions.",
-    descriptionJa:
-      "確率分布をシミュレーションするための、ガルトンボードの量子実装。",
-    tags: ["Quantum Computing", "Python", "Simulation", "Visualization"],
-    faviconUrl: "https://github.com/favicon.ico"
   }
 };

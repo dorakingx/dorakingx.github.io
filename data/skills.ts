@@ -11,34 +11,25 @@ export const skillGroups: SkillGroup[] = [
     skills: ["Qiskit", "OpenQASM", "Quantum algorithms", "Quantum error correction", "Quantum simulation"]
   },
   {
-    name: "AI & Creative Software",
-    nameJa: "AI・クリエイティブソフトウェア",
+    name: "AI",
+    nameJa: "AI",
     skills: [
       "LLMs",
-      "Gemini API",
       "AI agents",
       "Prompt engineering",
       "Evaluation",
-      "AI writing tools",
-      "Game AI",
-      "Music experiments",
-      "Interactive applications"
+      "AI applications"
     ]
   },
   {
-    name: "Engineering",
-    nameJa: "エンジニアリング",
+    name: "Blockchain",
+    nameJa: "ブロックチェーン",
     skills: [
-      "Next.js",
-      "TypeScript",
-      "React",
-      "Tailwind CSS",
-      "Django",
-      "Python",
-      "Numerical simulation",
-      "Scientific computing",
-      "GitHub",
-      "OSS development"
+      "Web3",
+      "Solana",
+      "Smart contracts",
+      "dApps",
+      "Cryptography"
     ]
   }
 ];

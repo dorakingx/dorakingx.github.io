@@ -72,24 +72,6 @@ export const githubProjectMetadata = [
     "updatedAt": "2025-08-16T11:18:18Z"
   },
   {
-    "repositoryName": "aliceinquantumland",
-    "owner": "dorakingx",
-    "githubUrl": "https://github.com/dorakingx/aliceinquantumland",
-    "description": "Free bilingual, accountless, local-first quantum computing course with interactive simulations.",
-    "homepageUrl": "https://aliceinquantum.land/",
-    "primaryLanguage": "TypeScript",
-    "topics": [
-      "bilingual",
-      "education",
-      "local-first",
-      "nextjs",
-      "quantum-computing",
-      "typescript"
-    ],
-    "starCount": 0,
-    "updatedAt": "2026-07-29T04:34:15Z"
-  },
-  {
     "repositoryName": "QSimCity",
     "owner": "dorakingx",
     "githubUrl": "https://github.com/dorakingx/QSimCity",
@@ -99,27 +81,5 @@ export const githubProjectMetadata = [
     "topics": [],
     "starCount": 0,
     "updatedAt": "2026-07-31T09:44:58Z"
-  },
-  {
-    "repositoryName": "AlphaShor",
-    "owner": "dorakingx",
-    "githubUrl": "https://github.com/dorakingx/AlphaShor",
-    "description": null,
-    "homepageUrl": null,
-    "primaryLanguage": "Python",
-    "topics": [],
-    "starCount": 0,
-    "updatedAt": "2026-04-05T11:22:39Z"
-  },
-  {
-    "repositoryName": "quantum-galton-board",
-    "owner": "dorakingx",
-    "githubUrl": "https://github.com/dorakingx/quantum-galton-board",
-    "description": null,
-    "homepageUrl": null,
-    "primaryLanguage": "Python",
-    "topics": [],
-    "starCount": 0,
-    "updatedAt": "2026-04-18T20:15:26Z"
   }
 ] as const satisfies readonly GitHubProjectMetadata[];

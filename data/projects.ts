@@ -1,5 +1,6 @@
 import { githubProjectMetadata } from "@/data/github-projects.generated";
 import { projectCuration } from "@/data/project-curation";
+import type { ProjectCuration } from "@/data/project-curation";
 import {
   selectedRepositoryNames,
   type SelectedRepositoryName
@@ -7,6 +8,7 @@ import {
 
 export type Project = {
   name: string;
+  projectType: ProjectCuration["projectType"];
   repositoryName: SelectedRepositoryName;
   githubUrl?: string;
   description: string;
@@ -59,6 +61,7 @@ export const projects: Project[] = selectedRepositoryNames
     return [
       {
         name: curation.displayName,
+        projectType: curation.projectType,
         repositoryName,
         githubUrl:
           curation.showGitHubRepository === false ? undefined : metadata.githubUrl,
