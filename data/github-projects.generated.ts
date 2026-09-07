@@ -47,7 +47,7 @@ export const githubProjectMetadata = [
     "primaryLanguage": "TypeScript",
     "topics": [],
     "starCount": 0,
-    "updatedAt": "2026-06-03T02:58:23Z"
+    "updatedAt": "2026-08-18T13:12:40Z"
   },
   {
     "repositoryName": "musiq",
@@ -68,8 +68,8 @@ export const githubProjectMetadata = [
     "homepageUrl": null,
     "primaryLanguage": "Python",
     "topics": [],
-    "starCount": 1,
-    "updatedAt": "2025-08-16T11:18:18Z"
+    "starCount": 2,
+    "updatedAt": "2026-08-29T05:08:34Z"
   },
   {
     "repositoryName": "QSimCity",
@@ -80,6 +80,6 @@ export const githubProjectMetadata = [
     "primaryLanguage": "TypeScript",
     "topics": [],
     "starCount": 0,
-    "updatedAt": "2026-07-31T09:44:58Z"
+    "updatedAt": "2026-08-08T04:54:48Z"
   }
 ] as const satisfies readonly GitHubProjectMetadata[];
