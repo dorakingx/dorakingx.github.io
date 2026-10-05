@@ -35,8 +35,8 @@ export const githubProjectMetadata = [
     "homepageUrl": "https://novelpilot.vercel.app/",
     "primaryLanguage": "TypeScript",
     "topics": [],
-    "starCount": 4,
-    "updatedAt": "2026-06-26T15:31:46Z"
+    "starCount": 0,
+    "updatedAt": "2026-09-18T06:38:21Z"
   },
   {
     "repositoryName": "qisquiz",
@@ -57,8 +57,8 @@ export const githubProjectMetadata = [
     "homepageUrl": "https://musiquantum.vercel.app/",
     "primaryLanguage": "OpenQASM",
     "topics": [],
-    "starCount": 1,
-    "updatedAt": "2026-06-26T14:47:38Z"
+    "starCount": 2,
+    "updatedAt": "2026-10-01T18:17:13Z"
   },
   {
     "repositoryName": "AlphaQuoridor",
