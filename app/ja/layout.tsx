@@ -3,9 +3,9 @@ import "../globals.css";
 import SiteHeader from "@/components/SiteHeader";
 
 const siteUrl = "https://dorakingx.github.io";
-const title = "Doraking — Quantum & AI Portfolio";
+const title = "Doraking — Quantum & Blockchain Developer";
 const description =
-  "Dorakingのポートフォリオ。量子コンピューティング研究者、AI/Web3ビルダー。";
+  "Quantum & Blockchain Developer、Dorakingのポートフォリオ。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

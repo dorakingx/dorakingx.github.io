@@ -4,7 +4,7 @@ export const translations = {
   en: {
     hero: {
       name: "Doraking",
-      role: "Quantum computing researcher & AI/Web3 builder.",
+      role: "Quantum & Blockchain Developer",
       description: "I turn research and experimental ideas into software for learning, creating, and exploring.",
       ctaProjects: "Explore projects",
       avatarAlt: "Doraking’s profile picture"
@@ -20,7 +20,7 @@ export const translations = {
   ja: {
     hero: {
       name: "Doraking",
-      role: "量子コンピューティング研究者・AI/Web3ビルダー。",
+      role: "Quantum & Blockchain Developer",
       description: "研究と実験的なアイデアを、学び・創作・探索のためのソフトウェアにしています。",
       ctaProjects: "プロジェクトを見る",
       avatarAlt: "Dorakingのプロフィール画像"
