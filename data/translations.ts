@@ -9,7 +9,7 @@ export const translations = {
       ctaProjects: "Explore projects",
       avatarAlt: "Doraking’s profile picture"
     },
-    navigation: { projects: "Projects", awards: "Awards", contact: "Contact", skip: "Skip to content" },
+    navigation: { about: "About", projects: "Projects", awards: "Awards", contact: "Contact", skip: "Skip to content" },
     projects: { title: "Selected Projects", description: "Experiments in quantum computing, AI, and creative software." },
     awards: { title: "Selected Awards", status: "Coming soon" },
     contact: {
@@ -25,7 +25,7 @@ export const translations = {
       ctaProjects: "プロジェクトを見る",
       avatarAlt: "Dorakingのプロフィール画像"
     },
-    navigation: { projects: "Projects", awards: "Awards", contact: "Contact", skip: "本文へ移動" },
+    navigation: { about: "About", projects: "Projects", awards: "Awards", contact: "Contact", skip: "本文へ移動" },
     projects: { title: "Selected Projects", description: "量子コンピューティング、AI、創作をめぐるソフトウェア。" },
     awards: { title: "Selected Awards", status: "Coming soon" },
     contact: {
