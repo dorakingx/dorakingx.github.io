@@ -92,10 +92,11 @@ The repository allowlist lives in:
 data/selected-repositories.ts
 ```
 
-Selected Projects are displayed by repository update date, newest first. The
+Selected Projects are displayed by repository update date, newest first, from
+left to right and then top to bottom. The
 array only controls the allowlist. The current selection is:
 
-- `aiterval`
+- `q11-emergency`
 - `novelpilot`
 - `qisquiz`
 - `musiq`

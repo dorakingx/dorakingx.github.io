@@ -17,16 +17,16 @@ export type ProjectCuration = {
  * overwrites this file.
  */
 export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = {
-  aiterval: {
-    displayName: "AIterval",
+  "q11-emergency": {
+    displayName: "Q11 Emergency",
     projectType: "App",
     description:
-      "A local-first Chrome extension that turns AI waiting time into short English listening practice.",
+      "A fire-dispatch game that teaches quantum error correction through a toy city, hidden errors, and rescue missions.",
     descriptionJa:
-      "AIの待ち時間を短い英語リスニング学習に変える、ローカルファーストのChrome拡張機能。",
-    tags: ["TypeScript", "React", "Manifest V3", "Web Speech API"],
-    faviconUrl: "/project-icons/aiterval.svg",
-    liveUrlOverride: "https://aiterval-build-week.vercel.app/demo/judge"
+      "おもちゃの街で隠れたエラーを探り、消防隊を出動させながら量子誤り訂正を学ぶゲーム。",
+    tags: ["Quantum Computing", "Education", "Qiskit", "React"],
+    faviconUrl: "/project-icons/q11-emergency.png",
+    liveUrlOverride: "https://q11-emergency.vercel.app"
   },
   novelpilot: {
     displayName: "NovelPilot",

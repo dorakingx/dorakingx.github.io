@@ -1,12 +1,13 @@
 /**
  * Explicit allowlist for the portfolio's Selected Projects section.
  *
- * Add, remove, or reorder repository names here. The sync script only fetches
+ * Add or remove repository names here. Display order is newest update first.
+ * The sync script only fetches
  * repositories in this list and never discovers new repositories
  * automatically.
  */
 export const selectedRepositoryNames = [
-  "aiterval",
+  "q11-emergency",
   "novelpilot",
   "qisquiz",
   "musiq",
