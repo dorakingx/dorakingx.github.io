@@ -26,7 +26,7 @@ export default function RootPage() {
         gap: "1rem",
         fontFamily: "sans-serif",
         color: "#f4f4f5",
-        background: "#050505"
+        background: "#0c100f"
       }}
     >
       <p style={{ color: "#5eead4" }}>Redirecting…</p>

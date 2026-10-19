@@ -17,6 +17,9 @@ export type Project = {
   tagsJa?: readonly string[];
   liveUrl?: string;
   faviconUrl: string;
+  previewUrl: string;
+  previewAlt: string;
+  previewAltJa: string;
   githubDescription: string | null;
   primaryLanguage: string | null;
   topics: readonly string[];
@@ -71,6 +74,9 @@ export const projects: Project[] = selectedRepositoryNames
         tagsJa: curation.tagsJa,
         liveUrl,
         faviconUrl: curation.faviconUrl,
+        previewUrl: curation.previewUrl,
+        previewAlt: curation.previewAlt,
+        previewAltJa: curation.previewAltJa,
         githubDescription: metadata.description,
         primaryLanguage: metadata.primaryLanguage,
         topics: metadata.topics,

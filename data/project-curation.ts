@@ -8,6 +8,9 @@ export type ProjectCuration = {
   tags: readonly string[];
   tagsJa?: readonly string[];
   faviconUrl: string;
+  previewUrl: string;
+  previewAlt: string;
+  previewAltJa: string;
   liveUrlOverride?: string;
   showGitHubRepository?: boolean;
 };
@@ -19,67 +22,85 @@ export type ProjectCuration = {
 export const projectCuration: Record<SelectedRepositoryName, ProjectCuration> = {
   "q11-emergency": {
     displayName: "Q11 Emergency",
+    previewUrl: "/images/projects/q11-emergency.webp",
+    previewAlt: "Q11 Emergency’s city map with six quantum error-correction districts.",
+    previewAltJa: "量子誤り訂正を学ぶ6つの地区が並ぶQ11 Emergencyの街。",
     projectType: "App",
     description:
-      "A fire-dispatch game that teaches quantum error correction through a toy city, hidden errors, and rescue missions.",
+      "Learn quantum error correction by reading alarms and dispatching fire crews through a toy city.",
     descriptionJa:
       "おもちゃの街で隠れたエラーを探り、消防隊を出動させながら量子誤り訂正を学ぶゲーム。",
-    tags: ["Quantum Computing", "Education", "Qiskit", "React"],
+    tags: ["Quantum Education", "Qiskit", "React"],
     faviconUrl: "/project-icons/q11-emergency.png",
     liveUrlOverride: "https://q11-emergency.vercel.app"
   },
   novelpilot: {
     displayName: "NovelPilot",
+    previewUrl: "/images/projects/novelpilot.webp",
+    previewAlt: "NovelPilot’s story planning workspace with characters, worldbuilding, and plot.",
+    previewAltJa: "登場人物・世界観・プロットを整理するNovelPilotの執筆画面。",
     projectType: "Agent",
     description:
-      "AI-powered creative writing and novel development tool for generating, organizing, and improving stories.",
+      "An AI writing room that turns a story idea into characters, a plot, and a complete manuscript.",
     descriptionJa:
-      "ストーリーの生成・整理・改善のためのAI搭載クリエイティブライティング・小説開発ツール。",
-    tags: ["AI", "Writing Tool", "Creative Tech", "Web App"],
+      "物語のアイデアから、登場人物・プロット・原稿をつくるAI執筆エージェント。",
+    tags: ["AI Agents", "Creative Writing", "TypeScript"],
     faviconUrl: "/project-icons/novelpilot.png",
     liveUrlOverride: "https://novelpilot.vercel.app"
   },
   qisquiz: {
     displayName: "Qisquiz",
+    previewUrl: "/images/projects/qisquiz.webp",
+    previewAlt: "Qisquiz’s quantum computing study app with practice and mock exams.",
+    previewAltJa: "分野別の練習と模擬試験を選べるQisquizの学習画面。",
     projectType: "App",
     description:
-      "Quantum computing quiz and exam preparation app designed to help learners practice quantum computing concepts.",
+      "Practice quantum computing and Qiskit with topic quizzes, mock exams, and progress tracking.",
     descriptionJa:
-      "学習者が量子コンピューティングの概念を練習するための量子コンピューティングクイズ・試験準備アプリ。",
-    tags: ["Quantum Computing", "Education", "Quiz App", "Qiskit"],
+      "分野別クイズ・模擬試験・学習記録で、量子コンピューティングとQiskitを学ぶアプリ。",
+    tags: ["Quantum Education", "Qiskit", "Next.js"],
     faviconUrl:
       "https://github.com/user-attachments/assets/97c97586-286a-4577-8d54-1bb91f9ebb61",
     liveUrlOverride: "https://qisquiz.vercel.app"
   },
   musiq: {
     displayName: "Musiq",
+    previewUrl: "/images/projects/musiq.webp",
+    previewAlt: "Musiq’s visual quantum circuit editor and audio workspace.",
+    previewAltJa: "量子回路を組み立て、音に変えるMusiqの操作画面。",
     projectType: "App",
     description:
-      "Experimental project exploring the intersection of quantum computing, OpenQASM, and music.",
+      "Compose quantum circuits and hear their results as sound, with waveform and spectrum previews.",
     descriptionJa:
-      "量子コンピューティング、OpenQASM、音楽の交差点を探求する実験的プロジェクト。",
-    tags: ["Quantum Music", "OpenQASM", "Creative Coding", "Quantum Computing"],
+      "量子回路を組み立てて音に変換し、波形とスペクトルで結果を探る音楽ツール。",
+    tags: ["Quantum Music", "OpenQASM", "Python"],
     faviconUrl: "https://github.com/dorakingx/musiq/raw/main/public/musiq_favicon.png",
     liveUrlOverride: "https://musiquantum.vercel.app/"
   },
   AlphaQuoridor: {
     displayName: "AlphaQuoridor",
+    previewUrl: "/images/projects/alphaquoridor.webp",
+    previewAlt: "An AlphaQuoridor game showing player positions and placed walls.",
+    previewAltJa: "駒の位置と壁の配置を示すAlphaQuoridorの対局画面。",
     projectType: "Agent",
     description:
-      "AlphaZero-style AI project for the board game Quoridor, combining game AI, search, and reinforcement-learning-inspired methods.",
+      "An AlphaZero-inspired game AI for navigating and placing walls in Quoridor.",
     descriptionJa:
-      "ボードゲーム「コリドー」のためのAlphaZeroスタイルAIプロジェクト。ゲームAI・探索・強化学習に着想を得た手法を組み合わせています。",
-    tags: ["Game AI", "AlphaZero", "Python", "Reinforcement Learning"],
+      "ボードゲーム「コリドー」の移動と壁の配置を考える、AlphaZeroに着想を得たAI。",
+    tags: ["Game AI", "AlphaZero", "Python"],
     faviconUrl: "https://github.com/dorakingx/AlphaQuoridor/raw/main/images/quoridor.png"
   },
   QSimCity: {
     displayName: "QSimCity",
+    previewUrl: "/images/projects/qsimcity.webp",
+    previewAlt: "QSimCity’s explorable 3D city visualizing a quantum computation.",
+    previewAltJa: "量子計算を可視化するQSimCityの探索可能な3D都市。",
     projectType: "App",
     description:
       "An explorable 3D quantum city that turns real computation traces into interactive educational visualizations.",
     descriptionJa:
       "実際の量子計算トレースを、探索可能な3D都市として可視化する教育・研究プロジェクト。",
-    tags: ["Quantum Computing", "3D Visualization", "OpenQASM", "Education"],
+    tags: ["Quantum Computing", "3D Visualization", "OpenQASM"],
     faviconUrl:
       "https://github.com/dorakingx/QSimCity/raw/main/apps/web/public/icons/icon-192.png",
     liveUrlOverride: "https://qsimcity.vercel.app"

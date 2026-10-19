@@ -1,33 +1,18 @@
 import type { Locale } from "@/data/translations";
 import { translations } from "@/data/translations";
 import ProjectCard from "@/components/ProjectCard";
-import SectionHeader from "@/components/SectionHeader";
 import { projects } from "@/data/projects";
 
-type Props = {
-  locale?: Locale;
-};
-
-export default function FeaturedProjects({ locale = "en" }: Props) {
+export default function FeaturedProjects({ locale = "en" }: { locale?: Locale }) {
   const t = translations[locale].projects;
-
   return (
-    <section id="projects" className="px-6 py-20 sm:px-10 lg:px-12">
-      <div className="mx-auto max-w-7xl">
-        <SectionHeader eyebrow={t.eyebrow} title={t.title} description={t.description} />
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.repositoryName ?? project.name}
-              locale={locale}
-              project={{
-                ...project,
-                description: locale === "ja" ? project.descriptionJa : project.description,
-                tags: locale === "ja" ? project.tagsJa ?? project.tags : project.tags
-              }}
-            />
-          ))}
-        </div>
+    <section id="projects" aria-labelledby="projects-title" className="page-width section-space border-t border-white/10">
+      <div className="mb-8 sm:mb-10">
+        <h2 id="projects-title" className="section-title">{t.title}</h2>
+        <p className="mt-3 text-base leading-7 text-zinc-400">{t.description}</p>
+      </div>
+      <div className="grid gap-7 md:grid-cols-2">
+        {projects.map((project) => <ProjectCard key={project.repositoryName} locale={locale} project={project} />)}
       </div>
     </section>
   );

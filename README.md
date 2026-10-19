@@ -168,10 +168,34 @@ click **Approve workflows to run** before pull-request CI starts. This
 automation does not use a personal access token, GitHub App token, or additional
 secret.
 
-## Updating Skills
-
-Skill groups live in `data/skills.ts`. Each group has an English `name` and a Japanese `nameJa`.
-
 ## Updating Translations
 
-All other UI text (hero, about, section headers, contact links, etc.) lives in `data/translations.ts`, organised by locale (`en` / `ja`).
+All other UI text (intro, navigation, section headers, etc.) lives in `data/translations.ts`, organised by locale (`en` / `ja`).
+
+## Portfolio layout and images
+
+The English and Japanese pages share four sections: Doraking’s introduction
+(including About), Selected Projects, Selected Awards, and Contact. Awards
+remain “Coming soon” until verified entries are added. Contact retains the five
+social profiles in `data/social-links.ts`.
+
+Project cards use local WebP previews, short descriptions, three tags, website /
+GitHub links, and the repository update date. Stars and primary-language metadata
+remain available to the sync tooling but are not shown on cards. Projects retain
+newest-update-first ordering, left to right and then top to bottom.
+
+Update preview paths and English/Japanese alt text in `data/project-curation.ts`.
+Keep previews in `public/images/projects/`; use actual product screenshots,
+compress to WebP, and preserve the whole image inside the card frame.
+
+Image sources (captured / retrieved 2026-10-19):
+
+- Doraking: public GitHub profile avatar, https://github.com/dorakingx
+- Q11 Emergency: `dorakingx/q11-emergency`, `docs/images/city.png`
+- QSimCity: `dorakingx/QSimCity`, `docs/assets/readme/hero-city-day.png`
+- AlphaQuoridor: `dorakingx/AlphaQuoridor`, `images/midgame.png`
+- NovelPilot: https://novelpilot.vercel.app, curated demo’s planning workspace
+- Musiq: https://musiquantum.vercel.app, local simulator with the GHZ template
+- Qisquiz: https://qisquiz.vercel.app, home screen
+- Social logos: https://github.com/simple-icons/simple-icons (CC0), stored in
+  `public/social-icons/`. Brand names and marks belong to their respective owners.
