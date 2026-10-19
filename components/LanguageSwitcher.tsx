@@ -8,7 +8,11 @@ type Props = {
 
 export default function LanguageSwitcher({ locale }: Props) {
   const handleSwitch = (newLocale: Locale) => {
-    localStorage.setItem("portfolio-language", newLocale);
+    try {
+      localStorage.setItem("portfolio-language", newLocale);
+    } catch {
+      // Navigation still works when browser storage is unavailable.
+    }
     const hash = window.location.hash;
     window.location.href = `/${newLocale}/${hash}`;
   };
@@ -16,15 +20,15 @@ export default function LanguageSwitcher({ locale }: Props) {
   return (
     <nav
       aria-label="Language switcher"
-      className="flex items-center gap-1 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 backdrop-blur-md"
+      className="flex items-center gap-1 rounded-full border border-white/15 bg-white/[0.025] px-2 py-1"
     >
       <button
         onClick={() => handleSwitch("en")}
         aria-current={locale === "en" ? "true" : undefined}
         className={
           locale === "en"
-            ? "rounded-full px-2 py-0.5 text-xs font-semibold text-teal-300 ring-1 ring-teal-300/50"
-            : "rounded-full px-2 py-0.5 text-xs font-medium text-zinc-400 transition hover:text-white"
+            ? "rounded-full min-h-9 px-2 text-xs font-semibold text-teal-300 ring-1 ring-teal-300/50"
+            : "rounded-full min-h-9 px-2 text-xs font-medium text-zinc-400 transition hover:text-white"
         }
       >
         EN
@@ -37,8 +41,8 @@ export default function LanguageSwitcher({ locale }: Props) {
         aria-current={locale === "ja" ? "true" : undefined}
         className={
           locale === "ja"
-            ? "rounded-full px-2 py-0.5 text-xs font-semibold text-teal-300 ring-1 ring-teal-300/50"
-            : "rounded-full px-2 py-0.5 text-xs font-medium text-zinc-400 transition hover:text-white"
+            ? "rounded-full min-h-9 px-2 text-xs font-semibold text-teal-300 ring-1 ring-teal-300/50"
+            : "rounded-full min-h-9 px-2 text-xs font-medium text-zinc-400 transition hover:text-white"
         }
       >
         日本語

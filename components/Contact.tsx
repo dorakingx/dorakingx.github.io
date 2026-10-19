@@ -1,32 +1,23 @@
-import type { Locale } from "@/data/translations";
-import { translations } from "@/data/translations";
-import SectionHeader from "@/components/SectionHeader";
+/* eslint-disable @next/next/no-img-element */
+import { translations, type Locale } from "@/data/translations";
+import { socialLinks } from "@/data/social-links";
 
-type Props = {
-  locale?: Locale;
-};
-
-export default function Contact({ locale = "en" }: Props) {
+export default function Contact({ locale = "en" }: { locale?: Locale }) {
   const t = translations[locale].contact;
-
   return (
-    <section id="contact" className="px-6 py-20 sm:px-10 lg:px-12">
-      <div className="mx-auto max-w-5xl">
-        <SectionHeader eyebrow={t.eyebrow} title={t.title} />
-        <div className="glass-panel rounded-lg p-6 sm:p-8">
-          <p className="text-center text-lg leading-8 text-zinc-200">{t.body}</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {t.links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="rounded-md border border-white/15 bg-white/[0.06] px-5 py-3 text-center text-sm font-semibold text-white transition hover:border-teal-200/50 hover:bg-white/[0.12] focus:outline-none focus:ring-2 focus:ring-teal-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </div>
+    <section id="contact" aria-labelledby="contact-title" className="page-width section-space border-t border-white/10">
+      <h2 id="contact-title" className="section-title">{t.title}</h2>
+      <p className="mt-3 text-base leading-7 text-zinc-400">{t.body}</p>
+      <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        {socialLinks.map((link) => (
+          <a key={link.name} href={link.href} target="_blank" rel="noreferrer" className="social-link flex min-w-0 items-center gap-3 rounded-xl border border-white/10 bg-white/[0.025] p-4 transition hover:border-white/30 hover:bg-white/[0.06]" aria-label={`${link.name}: ${link.handle}`}>
+            <span className={`social-icon social-icon-${link.icon} flex h-10 w-10 shrink-0 items-center justify-center rounded-lg`}>
+              <img src={`/social-icons/${link.icon}.svg`} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px] invert" />
+            </span>
+            <span className="font-medium text-zinc-100">{link.name}</span>
+            <span aria-hidden="true" className="ml-auto text-zinc-500">↗</span>
+          </a>
+        ))}
       </div>
     </section>
   );

@@ -2,12 +2,12 @@ import type { Metadata, Viewport } from "next";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Technical Portfolio",
+  title: "Doraking — Quantum & AI Portfolio",
   robots: { index: false }
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050505",
+  themeColor: "#0c100f",
   colorScheme: "dark"
 };
 

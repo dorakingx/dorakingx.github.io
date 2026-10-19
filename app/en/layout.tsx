@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import "../globals.css";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import SiteHeader from "@/components/SiteHeader";
 
 const siteUrl = "https://dorakingx.github.io";
-const title = "Technical Portfolio";
+const title = "Doraking — Quantum & AI Portfolio";
 const description =
   "Portfolio of Doraking, a quantum computing researcher and AI/Web3 software builder.";
 
@@ -33,23 +33,23 @@ export const metadata: Metadata = {
     url: `${siteUrl}/en/`,
     images: [
       {
-        url: "/images/quantum-hero.png",
-        width: 1536,
-        height: 864,
-        alt: "Theoretical quantum circuit diagram with H, X, phase, CNOT, and measurement gates"
+        url: "/images/doraking.webp",
+        width: 416,
+        height: 416,
+        alt: "Doraking’s profile picture"
       }
     ]
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title,
     description,
-    images: ["/images/quantum-hero.png"]
+    images: ["/images/doraking.webp"]
   }
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050505",
+  themeColor: "#0c100f",
   colorScheme: "dark"
 };
 
@@ -57,9 +57,7 @@ export default function EnLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="font-sans antialiased">
-        <header className="fixed right-4 top-4 z-50">
-          <LanguageSwitcher locale="en" />
-        </header>
+        <SiteHeader locale="en" />
         {children}
       </body>
     </html>
