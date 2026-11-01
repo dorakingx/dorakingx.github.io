@@ -13,9 +13,14 @@ export const translations = {
     projects: { title: "Selected Projects", description: "Experiments in quantum computing, AI, and creative software." },
     awards: {
       title: "Selected Awards",
-      project: "Q11 Emergency",
-      achievement: "1st Place at the IIIT Dharwad node in Qollab × IonQ Global Quantum Hackathon 2026",
-      linkLabel: "View hackathon results"
+      q11Emergency: {
+        achievement: "1st Place at the IIIT Dharwad node in Qollab × IonQ Global Quantum Hackathon 2026",
+        linkLabel: "View hackathon results"
+      },
+      qsimcity: {
+        achievement: "Finalist in the WISER Education Challenge for the WISER Summer Program 2026 Industry Challenge",
+        linkLabel: "View announcement"
+      }
     },
     contact: {
       title: "Let’s connect.",
@@ -34,9 +39,14 @@ export const translations = {
     projects: { title: "Selected Projects", description: "量子コンピューティング、AI、創作をめぐるソフトウェア。" },
     awards: {
       title: "Selected Awards",
-      project: "Q11 Emergency",
-      achievement: "Qollab × IonQ Global Quantum Hackathon 2026のIIIT Dharwad会場で第1位を受賞",
-      linkLabel: "ハッカソンの結果を見る"
+      q11Emergency: {
+        achievement: "Qollab × IonQ Global Quantum Hackathon 2026のIIIT Dharwad会場で第1位を受賞",
+        linkLabel: "ハッカソンの結果を見る"
+      },
+      qsimcity: {
+        achievement: "WISER Summer Program 2026 Industry ChallengeのWISER Education Challengeでファイナリストに選出",
+        linkLabel: "発表を見る"
+      }
     },
     contact: {
       title: "つながりましょう。",
