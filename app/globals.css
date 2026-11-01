@@ -17,7 +17,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #5eead4; outline-offs
   .project-link { @apply inline-flex min-h-11 items-center gap-2 text-sm font-medium underline-offset-4 hover:underline; }
   .skip-link { @apply sr-only focus:not-sr-only focus:absolute focus:left-6 focus:top-4 focus:z-50 focus:rounded-md focus:bg-teal-200 focus:p-3 focus:text-black; }
 }
-.social-icon-medium { background: #282c2b; }
+.social-icon-youtube { background: #b91c1c; }
 .social-icon-substack { background: #a63c0b; }
 .social-icon-x { background: #252927; }
 .social-icon-bluesky { background: #1256bd; }

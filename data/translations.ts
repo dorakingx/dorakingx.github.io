@@ -11,7 +11,12 @@ export const translations = {
     },
     navigation: { about: "About", projects: "Projects", awards: "Awards", contact: "Contact", skip: "Skip to content" },
     projects: { title: "Selected Projects", description: "Experiments in quantum computing, AI, and creative software." },
-    awards: { title: "Selected Awards", status: "Coming soon" },
+    awards: {
+      title: "Selected Awards",
+      project: "Q11 Emergency",
+      achievement: "1st Place at the IIIT Dharwad node in Qollab × IonQ Global Quantum Hackathon 2026",
+      linkLabel: "View hackathon results"
+    },
     contact: {
       title: "Let’s connect.",
       body: "For collaborations, research, or a conversation about what’s next."
@@ -27,7 +32,12 @@ export const translations = {
     },
     navigation: { about: "About", projects: "Projects", awards: "Awards", contact: "Contact", skip: "本文へ移動" },
     projects: { title: "Selected Projects", description: "量子コンピューティング、AI、創作をめぐるソフトウェア。" },
-    awards: { title: "Selected Awards", status: "Coming soon" },
+    awards: {
+      title: "Selected Awards",
+      project: "Q11 Emergency",
+      achievement: "Qollab × IonQ Global Quantum Hackathon 2026のIIIT Dharwad会場で第1位を受賞",
+      linkLabel: "ハッカソンの結果を見る"
+    },
     contact: {
       title: "つながりましょう。",
       body: "コラボレーション、研究、次のアイデアについて。"
