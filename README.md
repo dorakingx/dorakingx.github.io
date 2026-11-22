@@ -177,8 +177,8 @@ All other UI text (intro, navigation, section headers, etc.) lives in `data/tran
 The English and Japanese pages share four sections: Doraking’s introduction
 (including About), Selected Projects, Selected Awards, and Contact. Selected Awards includes Q11
 Emergency’s first place at the IIIT Dharwad node of the Qollab × IonQ Global
-Quantum Hackathon 2026, with a link to the event results. Contact shows X,
-YouTube, Substack, Bluesky, and Reddit in that order, using the shared profiles
+Quantum Hackathon 2026, with a link to the event results. Contact shows Medium,
+X, YouTube, Substack, Bluesky, and Reddit in that order, using the shared profiles
 in `data/social-links.ts`.
 
 Project cards use local WebP previews, short descriptions, three tags, website /

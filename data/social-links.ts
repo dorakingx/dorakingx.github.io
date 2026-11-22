@@ -1,4 +1,5 @@
 export const socialLinks = [
+  { name: "Medium", handle: "@doraking", href: "https://medium.com/@doraking", icon: "medium" },
   { name: "X", handle: "@dorakingxyz", href: "https://x.com/dorakingxyz", icon: "x" },
   { name: "YouTube", handle: "@dorakingxyz", href: "https://www.youtube.com/@dorakingxyz", icon: "youtube" },
   { name: "Substack", handle: "@doraking", href: "https://substack.com/@doraking", icon: "substack" },
