@@ -8,7 +8,7 @@ export default function Contact({ locale = "en" }: { locale?: Locale }) {
     <section id="contact" aria-labelledby="contact-title" className="page-width section-space border-t border-white/10">
       <h2 id="contact-title" className="section-title">{t.title}</h2>
       <p className="mt-3 text-base leading-7 text-zinc-400">{t.body}</p>
-      <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
         {socialLinks.map((link) => (
           <a key={link.name} href={link.href} target="_blank" rel="noreferrer" className="social-link flex min-w-0 items-center gap-3 rounded-xl border border-white/10 bg-white/[0.025] p-4 transition hover:border-white/30 hover:bg-white/[0.06]" aria-label={`${link.name}: ${link.handle}`}>
             <span className={`social-icon social-icon-${link.icon} flex h-10 w-10 shrink-0 items-center justify-center rounded-lg`}>
